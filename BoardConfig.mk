@@ -161,6 +161,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Platform
 TARGET_BOARD_PLATFORM := kalama
 
+# Power
+TARGET_POWER_FEATURE_EXT_LIB := //$(DEVICE_PATH):libpowerfeature_ext_ishtar
+
 # PowerShare
 TARGET_POWERSHARE_NODE := /sys/class/qcom-battery/reverse_chg_mode
 
