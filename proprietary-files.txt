@@ -3410,3 +3410,4 @@ vendor/lib/android.hardware.sensors@2.0-ScopedWakelock.so
 vendor/lib/android.hardware.sensors@1.0.so
 vendor/lib/android.hardware.sensors@2.1.so
 vendor/bin/hw/android.hardware.sensors-service.multihal
+

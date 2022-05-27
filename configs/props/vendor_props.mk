@@ -253,6 +253,17 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     drm.service.enabled=true
 
+# Fingerprint
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.sys.fp.expolevel=0x88 \
+    persist.vendor.sys.fp.fod.location.X_Y=720,2541 \
+    persist.vendor.sys.fp.fod.size.width_height=246,246 \
+    ro.hardware.fp.fod.location=low \
+    ro.hardware.fp.fod.lowlight.brightness.threshold=411 \
+    ro.hardware.fp.fod.lowlight.lux.threshold=3 \
+    ro.hardware.fp.fod.touch.ctl.version=2.0 \
+    ro.hardware.fp.fod=true
+
 # FRP
 PRODUCT_VENDOR_PROPERTIES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
