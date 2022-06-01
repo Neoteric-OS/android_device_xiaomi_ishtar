@@ -78,9 +78,6 @@ TARGET_SCREEN_DENSITY := 560
 # DTB
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
-# Fingerprint
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_sm8550
-
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml \
