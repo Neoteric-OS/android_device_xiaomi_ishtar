@@ -173,7 +173,13 @@ PRODUCT_VENDOR_PROPERTIES += \
     bluetooth.profile.pan.nap.enabled?=true \
     bluetooth.profile.pan.panu.enabled?=true \
     bluetooth.profile.pbap.server.enabled?=true \
-    bluetooth.profile.sap.server.enabled?=true
+    bluetooth.profile.sap.server.enabled?=true \
+    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-lhdc \
+    persist.vendor.bt.aac_frm_ctl.enabled=true \
+    persist.vendor.bt.aac_vbr_frm_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
+    persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 
 # Camera
 PRODUCT_VENDOR_PROPERTIES += \
