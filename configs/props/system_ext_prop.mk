@@ -1,3 +1,8 @@
+# Doze
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sensor.pickup=xiaomi.sensor.pickup \
+    ro.sensor.pickup.lower.value=2
+
 # Media
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     vendor.media.target_variant=_kalama
