@@ -37,6 +37,11 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
+# Boot control
+SOONG_CONFIG_NAMESPACES += ufsbsg
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kalama
 TARGET_NO_BOOTLOADER := true
@@ -71,6 +76,7 @@ BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
+TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true

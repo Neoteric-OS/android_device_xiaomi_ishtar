@@ -60,6 +60,12 @@ PRODUCT_PACKAGES += \
 # Board
 TARGET_BOARD_PLATFORM := kalama
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl-qti \
+    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-service
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom
