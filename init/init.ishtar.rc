@@ -12,3 +12,7 @@ write /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us 500
 write /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us 20000
 write /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us 500
 write /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us 20000
+
+# CPUSets
+setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
+setprop dalvik.vm.dex2oat-threads 6
