@@ -345,7 +345,6 @@ PRODUCT_PACKAGES += \
     libsn100nfc_nci_jni \
     NQNfcNci \
     Tag \
-    se_nq_extn_client \
     ls_nq_client \
     jcos_nq_client
 
