@@ -61,22 +61,47 @@ BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
 # Kernel
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_DTB_SIZE := 5725389
+BOARD_DTB_OFFSET :=0x01F00000
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_RAMDISK_OFFSET := 0x01000000
+
+BOARD_KERNEL_CMDLINE := \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    disable_dma32=on \
+    bootinfo.fingerprint=$(CUSTOM_VERSION) \
+    mtdoops.fingerprint=$(CUSTOM_VERSION)
+
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3
 
-BOARD_KERNEL_CMDLINE := \
-    bootinfo.fingerprint=$(CUSTOM_VERSION) \
-    disable_dma32=on \
-    mtdoops.fingerprint=$(CUSTOM_VERSION) \
-    video=vfb:640x400,bpp=32,memsize=3072000
-
 BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
-BOARD_KERNEL_PAGESIZE := 4096
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
-TARGET_HAS_GENERIC_KERNEL_HEADERS := true
+BOARD_KERNEL_IMAGE_NAME := Image
+
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+
+BOARD_RAMDISK_USE_LZ4 := true
+TARGET_KERNEL_APPEND_DTB := false
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+
+TARGET_FORCE_PREBUILT_KERNEL := true
+
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
+
+TARGET_BOARD_KERNEL_HEADERS := $(DEVICE_PATH)/prebuilts/kernel-headers
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -111,6 +136,23 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
 BOARD_USES_RECOVERY_AS_BOOT := false
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := false
+
+# Vendor boot
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilts/modules/ramdisk/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/ramdisk/modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/prebuilts/modules/ramdisk/modules.blocklist
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/ramdisk/modules.load.recovery))
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
+# Vendor_dlkm
+BOARD_VENDOR_RAMDISK_FRAGMENTS := dlkm
+BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.KERNEL_MODULE_DIRS := top
+
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilts/modules/vendor/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/vendor/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE :=  $(DEVICE_PATH)/prebuilts/modules/vendor/modules.blocklist
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

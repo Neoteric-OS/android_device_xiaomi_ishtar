@@ -66,6 +66,10 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti.recovery \
     android.hardware.boot@1.2-service
 
+# DTB
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/prebuilts/dtb:dtb.img
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
