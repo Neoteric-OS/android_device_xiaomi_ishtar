@@ -49,11 +49,6 @@ system_dlkm                                             /system_dlkm           e
 system_dlkm                                             /system_dlkm           ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta,logical,first_stage_mount
 odm                                                     /odm                   erofs   ro                                                   wait,slotselect,avb=vbmeta,logical,first_stage_mount
 odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta,logical,first_stage_mount
-overlay                                                 /system/app               overlay ro,lowerdir=/mnt/vendor/mi_ext/system/app/:/product/pangu/system/app/:/system/app check,nofail
-overlay                                                 /system/priv-app          overlay ro,lowerdir=/mnt/vendor/mi_ext/system/priv-app/:/product/pangu/system/priv-app/:/system/priv-app check,nofail
-overlay                                                 /system/framework         overlay ro,lowerdir=/product/pangu/system/framework/:/system/framework check,nofail
-overlay                                                 /system/etc/sysconfig     overlay ro,lowerdir=/mnt/vendor/mi_ext/system/etc/sysconfig/:/system/etc/sysconfig check,nofail
-overlay                                                 /system/etc/permissions   overlay ro,lowerdir=/mnt/vendor/mi_ext/system/etc/permissions/:/product/pangu/system/etc/permissions/:/system/etc/permissions check,nofail
 /dev/block/by-name/boot                                 /boot                  emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
 /dev/block/by-name/init_boot                            /init_boot             emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
 /dev/block/by-name/vendor_boot                          /vendor_boot           emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
