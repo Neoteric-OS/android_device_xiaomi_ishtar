@@ -367,6 +367,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     FrameworksResIshtar \
+    PEIshtarSettings \
+    PEIshtarSystemUI \
     SettingsResIshtar \
     SystemUIResIshtar
 
