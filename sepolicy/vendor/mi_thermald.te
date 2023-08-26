@@ -27,3 +27,5 @@ r_dir_file(mi_thermald, sysfs_thermal)
 r_dir_file(mi_thermald, sysfs)
 r_dir_file(mi_thermald, sysfs_leds)
 r_dir_file(mi_thermald, vendor_sysfs_qcom_battery)
+
+set_prop(mi_thermald, vendor_thermal_normal_prop)
