@@ -284,6 +284,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 BOARD_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
+PRODUCT_TARGET_VNDK_VERSION := $(BOARD_API_LEVEL)
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -309,6 +310,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
+# VNDK
+PRODUCT_PACKAGES += \
+    vndservicemanager
 
 # WiFi
 PRODUCT_PACKAGES += \
