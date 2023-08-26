@@ -203,6 +203,13 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti_recovery \
     charger_res_images_vendor
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0.vendor \
+    android.hidl.memory.block@1.0.vendor \
+    libhidltransport.vendor \
+    libhwbinder.vendor
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
