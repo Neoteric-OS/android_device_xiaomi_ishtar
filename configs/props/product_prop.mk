@@ -23,3 +23,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     vendor.audio.use.sw.ape.decoder=true \
     vendor.audio_hal.period_size=192 \
     vendor.voice.path.for.pcm.voip=true
+
+# Camera
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.com.google.lens.oem_camera_package=com.android.camera \
+    ro.hardware.camera=xiaomi
