@@ -299,6 +299,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
 
+# Neural networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks-V1-ndk_platform.vendor
+
 # NFC
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 TARGET_USES_NQ_NFC := true
