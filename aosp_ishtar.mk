@@ -12,6 +12,9 @@ $(call inherit-product, $(DEVICE_PATH)/kalama.mk)
 # Inherit common Pixel Experience configurations
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1440
+
 # Device identifier
 PRODUCT_DEVICE := ishtar
 PRODUCT_NAME := aosp_ishtar
