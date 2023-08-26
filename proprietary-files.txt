@@ -210,7 +210,6 @@ vendor/lib/libcapiv2svacnnvendor.so
 vendor/lib/libcapiv2svarnnvendor.so
 vendor/lib/libcapiv2udk7vendor.so
 vendor/lib/libcapiv2uvvendor.so
-vendor/lib/libdapparamstorage.so
 vendor/lib/libdlbpreg.so
 vendor/lib/libfmpal.so
 vendor/lib/libkaraokepal.so
@@ -258,7 +257,6 @@ vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2udk7vendor.so
 vendor/lib64/libcapiv2uvvendor.so
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libfmpal.so
 vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
@@ -332,32 +330,21 @@ odm/firmware/cs35l41-dsp1-spk-prot.wmfw
 # Audio FX modules
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libdlbvol.so
-vendor/lib/soundfx/libhwdap.so
 vendor/lib/soundfx/libmisoundfx.so
-vendor/lib/soundfx/libqcompostprocbundle.so
-vendor/lib/soundfx/libqcomvisualizer.so
-vendor/lib/soundfx/libqcomvoiceprocessing.so
 vendor/lib/soundfx/libquasar.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libspatializer.so
-vendor/lib/soundfx/libswgamedap.so
 vendor/lib/soundfx/libswspatializer.so
-vendor/lib/soundfx/libswvqe.so
-vendor/lib/soundfx/libvolumelistener.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libdlbvol.so
 vendor/lib64/soundfx/libhwdap.so
 vendor/lib64/soundfx/libmisoundfx.so
-vendor/lib64/soundfx/libqcompostprocbundle.so
-vendor/lib64/soundfx/libqcomvisualizer.so
-vendor/lib64/soundfx/libqcomvoiceprocessing.so
 vendor/lib64/soundfx/libquasar.so
 vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/soundfx/libspatializer.so
 vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libswspatializer.so
 vendor/lib64/soundfx/libswvqe.so
-vendor/lib64/soundfx/libvolumelistener.so
 
 # Batterysecret
 vendor/bin/batterysecret
@@ -1400,22 +1387,6 @@ odm/lib64/camera/libchxlogicalcameratable.so
 
 # Computer vision
 vendor/etc/eva/facedetection/model3.dat
-vendor/lib/libFace3DTA.so
-vendor/lib/libFace3D_hlos.so
-vendor/lib/libQ6MSFR_manager_stub.so
-vendor/lib/libcv_common.so
-vendor/lib/libeva.so
-vendor/lib/libeva_util.so
-vendor/lib/libface3d_dev.so
-vendor/lib/libfastcvdsp_stub.so
-vendor/lib/libfastcvopt.so
-vendor/lib/libscveCommon.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectSegmentation_stub.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/libscveObjectTracker_stub.so
-vendor/lib/libvideoutils.so
 vendor/lib64/libFace3DTA.so
 vendor/lib64/libFace3D_hlos.so
 vendor/lib64/libQ6MSFR_manager_stub.so
@@ -1436,15 +1407,15 @@ vendor/lib64/libvideoutils.so
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
-vendor/lib/libcdsp_default_listener.so
-vendor/lib/libcdsprpc.so
-vendor/lib/libmdsprpc.so
-vendor/lib/libsdsprpc.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
+
+# Charger
+vendor/etc/charger_diag.cfg
+vendor/etc/charger_fw_fstab.qti
 
 # CNE
 vendor/app/CACertService/CACertService.apk
@@ -1780,12 +1751,6 @@ vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature@1.0-service.xml
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
-vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
-vendor/lib/libdisplayfeature.so
-vendor/lib/libdisplayfeatureservice.so
-vendor/lib/libeyecare.so
-vendor/lib/libmi-stc-HW-modulate.so
-vendor/lib/vendor.xiaomi.hardware.displayfeature@1.0.so
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
 vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib64/libdisplayfeature.so
@@ -1897,7 +1862,6 @@ vendor/lib64/libfastcvdsp_stub.so
 -vendor/lib64/libfastcvopt.so
 
 # Fingerprint
-odm/app/GFDelmarSetting/GFDelmarSetting.apk
 odm/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so
 odm/lib64/libgf_hal.so
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
@@ -2114,7 +2078,9 @@ vendor/etc/init/qconfig.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
+vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_c2_audio.xml
 vendor/etc/media_codecs_kalama.xml
 vendor/etc/media_codecs_kalama_vendor.xml
 vendor/etc/media_codecs_performance_kalama.xml
@@ -2241,6 +2207,7 @@ vendor/etc/init/modemManager.rc
 vendor/etc/seccomp_policy/modemManager.policy
 
 # Memory
+-vendor/lib/libvmmem.so
 -vendor/lib64/libvmmem.so
 
 # Native public libraries
@@ -2314,6 +2281,7 @@ vendor/lib/libvui_dmgr_client.so
 vendor/lib/vendor.nxp.hardware.nfc@2.0.so
 vendor/lib64/libsn100u_fw.so
 vendor/lib64/libsn220u_fw.so
+vendor/lib64/libstnfc-auth.so
 vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
@@ -2328,8 +2296,6 @@ vendor/lib64/libpdnotifier.so
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/bin/pm_ioctl_app
-vendor/lib/libperipheral_client.so
-vendor/lib/libspcom.so
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
@@ -2566,15 +2532,6 @@ vendor/etc/qvr/qvr_hid_device_list.txt
 vendor/etc/qvr/qvr_usb_device_list.txt
 vendor/etc/qvr/qvrservice_config.txt
 vendor/etc/seccomp_policy/qvr@2.0.policy
-vendor/lib/libStereoRectifyWrapper.so
-vendor/lib/libhalide_hexagon_host.so
-vendor/lib/libqvrcamera_client.qti.so
-vendor/lib/libqvrcameraplayback.so
-vendor/lib/libqvrservice.so
-vendor/lib/libqvrservice_client.qti.so
-vendor/lib/libqvrservice_ov7251_hvx_tuning.so
-vendor/lib/libqvrservice_ov9282_hvx_tuning.so
-vendor/lib/libqvrservice_v4l_ov7251_hvx_tuning.so
 vendor/lib64/libDspIOProxy_stub.so
 vendor/lib64/libMapService.so
 vendor/lib64/libScenescape.so
@@ -2828,20 +2785,7 @@ vendor/bin/qseecomd
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
-vendor/lib/hw/vendor.qti.hardware.qseecom@1.0-impl.so
-vendor/lib/libGPreqcancel.so
-vendor/lib/libGPreqcancel_svc.so
-vendor/lib/libQSEEComAPI.so
-vendor/lib/libcpion.so
-vendor/lib/libdrmfs.so
-vendor/lib/libdrmtime.so
 vendor/lib/libdrmutils.so
-vendor/lib/libops.so
-vendor/lib/libqisl.so
-vendor/lib/librpmb.so
-vendor/lib/libspl.so
-vendor/lib/libssd.so
-vendor/lib/vendor.qti.hardware.qseecom@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libbase64.so
 vendor/lib64/libGPreqcancel.so
@@ -2897,6 +2841,7 @@ vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libnanopb.so
+vendor/lib64/libprotobuf-cpp-full-3.9.1.so
 vendor/lib64/libsensor_calibration.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
@@ -2973,16 +2918,13 @@ odm/etc/sensors/config/sx933x_0.json
 odm/etc/sensors/config/tcs3408.json
 
 # Sensors (odm)
-odm/lib/libssccalapi@2.0.so
-odm/lib/libsensor_cal@2.0.so
+odm/etc/init/init.vl53l5.rc
+odm/firmware/glove_model.tflite
+odm/firmware/film_model.tflite
+odm/firmware/stmvl53l5.bin
+odm/firmware/water_check.tflite
 odm/lib64/libssccalapi@2.0.so
 odm/lib64/libsensor_cal@2.0.so
-odm/lib/libclient2slpi.notifier.so
-odm/lib/sensors.touch.detect.so
-odm/lib/subwaystate.hal.so
-odm/lib/vl53l5.core.so
-odm/lib/vl53l5.hal@1.0.so
-odm/lib/vl53l5.hal@2.0.so
 odm/lib64/libclient2slpi.notifier.so
 odm/lib64/sensors.touch.detect.so
 odm/lib64/subwaystate.hal.so
@@ -3025,25 +2967,16 @@ vendor/bin/ssr_diag
 vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
 
+# Subway
+odm/bin/subwaystate_test
+odm/lib64/libsubway_states_sensor.so
+odm/lib64/subwaystate.hal.so
+
 # SXR
 vendor/bin/hw/sxrservice
 vendor/etc/init/sxrd.rc
 vendor/etc/seccomp_policy/sxr@2.0.policy
 vendor/lib64/libsxrservice.so
-
-# Touchscreen
-odm/bin/toucheventcheck
-odm/bin/touch_raw
-odm/bin/touch_report
-odm/bin/touchsensor
-odm/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
-odm/etc/init.panel_info.sh
-odm/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
-odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
-odm/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
-odm/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
-vendor/lib/vendor.xiaomi.hw.touchfeature@1.0.so
-vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
 
 # TFTP
 vendor/bin/tftp_server
@@ -3091,13 +3024,20 @@ vendor/lib64/libtime_genoff.so
 odm/firmware/st_fts_m1.ftb
 odm/firmware/stm_fts_production_limits.csv
 
+# Touchscreen
+odm/bin/toucheventcheck
+odm/bin/touch_raw
+odm/bin/touch_report
+odm/bin/touchsensor
+odm/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
+odm/etc/init.panel_info.sh
+odm/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
+odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
+odm/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
+vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
+
 # Trusted Execution Environment connector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
-vendor/lib/libGPMTEEC_vendor.so
-vendor/lib/libGPQTEEC_vendor.so
-vendor/lib/libGPTEE_vendor.so
-vendor/lib/libQTEEConnector_vendor.so
-vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so
 vendor/lib64/libGPMTEEC_vendor.so
 vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
@@ -3111,19 +3051,6 @@ vendor/bin/trusteduilistener
 vendor/etc/init/trusteduilistener.rc
 vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib/libTouchInputVM.so
-vendor/lib/libTrustedInput.so
-vendor/lib/libTrustedInputTZ.so
-vendor/lib/libTrustedInputUtils.so
-vendor/lib/libTrustedUI.so
-vendor/lib/libTrustedUITZ.so
-vendor/lib/libTrustedUIVM.so
-vendor/lib/libminksocket_vendor.so
-vendor/lib/libsi.so
-vendor/lib/vendor.qti.hardware.trustedui@1.0.so
-vendor/lib/vendor.qti.hardware.trustedui@1.1.so
-vendor/lib/vendor.qti.hardware.trustedui@1.2.so
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/android.hidl.memory.block@1.0.so
 vendor/lib64/libTouchInputVM.so
 vendor/lib64/libTrustedInput.so
@@ -3213,26 +3140,6 @@ system_ext/etc/seccomp_policy/wfdservice.policy
 system_ext/etc/seccomp_policy/wfdservice64.policy
 system_ext/etc/wfdconfigsink.xml
 system_ext/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
-system_ext/lib/libmmparser_lite.so
-system_ext/lib/libmmrtpdecoder.so
-system_ext/lib/libmmrtpencoder.so
-system_ext/lib/libwfdavenhancements.so
-system_ext/lib/libwfdclient.so
-system_ext/lib/libwfdcommonutils.so
-system_ext/lib/libwfdconfigutils.so
-system_ext/lib/libwfddisplayconfig.so
-system_ext/lib/libwfdmminterface.so
-system_ext/lib/libwfdmmsink.so
-system_ext/lib/libwfdmmsrc_system.so
-system_ext/lib/libwfdrtsp.so
-system_ext/lib/libwfdservice.so
-system_ext/lib/libwfdsinksm.so
-system_ext/lib/libwfduibcinterface.so
-system_ext/lib/libwfduibcsink.so
-system_ext/lib/libwfduibcsinkinterface.so
-system_ext/lib/libwfduibcsrc.so
-system_ext/lib/libwfduibcsrcinterface.so
-system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 system_ext/lib64/libmmparser_lite.so
 system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
