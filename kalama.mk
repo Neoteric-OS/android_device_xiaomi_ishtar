@@ -94,6 +94,21 @@ PRODUCT_PACKAGES += \
     ueventd.odm.rc \
     ueventd.qcom.rc
 
+# Overlays
+PRODUCT_PACKAGES += \
+    CellBroadcastReceiverResCommon_Sys \
+    FrameworksResCommon \
+    SettingsResCommon \
+    SystemUIResCommon \
+    TelecommResCommon_Sys \
+    TelephonyResCommon_Sys \
+    WifiResCommon
+
+PRODUCT_PACKAGES += \
+    FrameworksResIshtar \
+    SettingsResIshtar \
+    SystemUIResIshtar
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
