@@ -314,6 +314,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.c2inputsurface=-1 \
+    debug.stagefright.ccodec=4 \
+    debug.stagefright.omx_default_rank=0 \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.mediaserver.64b.enable=true
 
 # Perf
