@@ -367,6 +367,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/kalama/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# Properties
+include $(DEVICE_PATH)/configs/props/odm_props.mk
+include $(DEVICE_PATH)/configs/props/product_prop.mk
+include $(DEVICE_PATH)/configs/props/system_ext_prop.mk
+include $(DEVICE_PATH)/configs/props/system_prop.mk
+include $(DEVICE_PATH)/configs/props/vendor_props.mk
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
