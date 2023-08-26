@@ -3043,7 +3043,9 @@ vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
 # Thermal engine
+vendor/bin/mi_thermald
 vendor/bin/thermal-engine-v2
+vendor/etc/init/hw/init.mi_thermald.rc
 vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/thermal-engine.conf
 -vendor/lib64/liblmthermallistner.so
