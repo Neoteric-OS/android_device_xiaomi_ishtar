@@ -286,6 +286,10 @@ BOARD_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
 PRODUCT_TARGET_VNDK_VERSION := $(BOARD_API_LEVEL)
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti-v2
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
