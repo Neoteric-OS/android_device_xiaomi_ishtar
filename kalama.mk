@@ -97,6 +97,8 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     CellBroadcastReceiverResCommon_Sys \
+    CarrierConfigResCommon_Sys  \
+    CarrierConfigResTarget_vendor \
     FrameworksResCommon \
     SettingsResCommon \
     SystemUIResCommon \
