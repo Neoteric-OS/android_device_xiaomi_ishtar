@@ -220,6 +220,10 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
+# Identity
+PRODUCT_PACKAGES += \
+    android.hardware.identity-V3-ndk_platform.vendor
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
