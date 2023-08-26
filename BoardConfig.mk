@@ -174,6 +174,9 @@ BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := false
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Sepolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Vendor boot
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilts/modules/ramdisk/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/ramdisk/modules.load))
