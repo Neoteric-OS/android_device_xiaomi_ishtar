@@ -109,6 +109,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor
 
+# Automotive
+PRODUCT_PACKAGES += \
+    android.hardware.automotive.vehicle@2.0-manager-lib
+
 # Board
 TARGET_BOARD_PLATFORM := kalama
 
