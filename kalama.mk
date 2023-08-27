@@ -428,6 +428,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.hardware.sensors-service.multihal \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \

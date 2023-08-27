@@ -3273,12 +3273,3 @@ vendor/lib64/libgralloccore.so
 vendor/lib64/libgrallocutils.so
 vendor/lib64/libqservice.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
-
-# Sensors (test)
-vendor/lib64/android.hardware.sensors@2.0.so
-vendor/lib64/android.hardware.sensors@2.0-ScopedWakelock.so
-vendor/lib64/android.hardware.sensors@1.0.so
-vendor/lib64/android.hardware.sensors@2.1.so
-vendor/etc/init/android.hardware.sensors-service-multihal.rc
-vendor/etc/vintf/manifest/android.hardware.sensors-multihal.xml
-vendor/bin/hw/android.hardware.sensors-service.multihal
