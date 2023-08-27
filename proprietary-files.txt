@@ -1526,6 +1526,9 @@ vendor/etc/init/qwesd.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/seccomp_policy/qwesd@2.0.policy
 
+# Consumer IR
+odm/lib64/hw/consumerir.qcom.so:vendor/lib64/hw/consumerir.qcom.so
+
 # CVE (firmware)
 odm/firmware/evass.b00
 odm/firmware/evass.b01

@@ -1,5 +1,8 @@
 type vendor_sysfs_qcom_battery, fs_type, sysfs_type;
 
+# Consumer IR
+type ir_spi_device, dev_type;
+
 # Thermal
 type sys_thermal_wifi_limit, fs_type, sysfs_type;
 type sys_thermal_flash_state, fs_type, sysfs_type;
