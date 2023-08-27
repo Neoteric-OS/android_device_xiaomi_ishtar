@@ -325,8 +325,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.perf-hal.ver=2.3 \
     ro.vendor.perf.scroll_opt.heavy_app=2 \
     ro.vendor.perf.scroll_opt=1 \
-    vendor.pasr.activemode.enabled=false \
-    vendor.power.pasr.enabled=false
+    vendor.pasr.activemode.enabled=true \
+    vendor.power.pasr.enabled=true \
+    vendor.perf.framepacing.enable=1
 
 # QMI
 PRODUCT_VENDOR_PROPERTIES += \
