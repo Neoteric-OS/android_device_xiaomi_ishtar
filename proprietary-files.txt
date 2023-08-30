@@ -153,7 +153,7 @@ odm/lib/rfsa/adsp/libmialgo_rawhdr_cdsp_skel.so
 vendor/lib/hw/com.dsi.ant@1.0-impl.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# AGM
+# AGM (vendor)
 vendor/bin/agmcap
 vendor/bin/agmcompresscap
 vendor/bin/agmcompressplay
@@ -176,7 +176,7 @@ vendor/lib64/libagmmixer.so
 -vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
-# AGM
+# AGM (odm)
 -odm/lib/libagmdevice.so
 -odm/lib64/libagmdevice.so
 -vendor/lib/libagm.so
@@ -250,7 +250,6 @@ vendor/lib64/libdlbpreg.so
 vendor/lib64/libdsd2pcm.so
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
-vendor/lib64/libfmpal.so
 vendor/lib64/libhfp_pal.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/libcapiv2svacnnvendor.so
@@ -262,14 +261,11 @@ vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
 -vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
-vendor/lib64/libpal_net_if.so
 vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libresampler.so
 vendor/lib64/libsndcardparser.so
 vendor/lib64/libspatializerparamstorage.so
-vendor/lib64/libvui_dmgr.so
-vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libxlog.so
 vendor/lib64/libmispowerop.so
 vendor/lib64/libmisoundsa.so
@@ -362,7 +358,6 @@ vendor/lib64/lib_bt_ble.so
 vendor/lib64/lib_bt_bundle.so
 vendor/lib64/lib_bt_lhdc.so
 vendor/lib64/libbtnv.so
-vendor/lib64/libsoc_helper.so
 vendor/lib64/vendor.qti.hardware.bttpi-V2-ndk.so
 
 # Bluetooth (A2DP)
@@ -371,7 +366,6 @@ vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/android.hardware.bluetooth.audio-impl-qti.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-vendor/lib/vendor.qti.hardware.bluetooth.audio-V1-ndk.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
@@ -392,7 +386,6 @@ vendor/lib64/libbluetooth_audio_session_aidl_qti.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libbt-hidlclient.so
-vendor/lib64/vendor.qti.hardware.bluetooth.audio-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
@@ -573,11 +566,13 @@ odm/lib64/camera/components/com.mi.node.facealign.so
 odm/lib64/camera/components/com.mi.node.frontbokeh.so
 odm/lib64/camera/components/com.mi.node.hdr.so
 odm/lib64/camera/components/com.mi.node.realtimebokeh.so
+odm/lib64/camera/components/com.mi.node.rearvideo.so
 odm/lib64/camera/components/com.mi.node.skinbeautifier.so
 odm/lib64/camera/components/com.mi.node.tsskinbeautifier.so
 odm/lib64/camera/components/com.mi.node.videonight.so
 odm/lib64/camera/components/com.qti.node.ldc.so
 odm/lib64/camera/components/com.qti.node.remosaic.so
+odm/lib64/camera/components/com.xiaomi.node.alpha_blending.so
 odm/lib64/camera/components/com.xiaomi.node.smooth_transition.so
 odm/lib64/camera/fdconfigpreview.bin
 odm/lib64/camera/fdconfigpreviewlite.bin
@@ -640,7 +635,6 @@ odm/lib64/libxmi_hdr_checker.so
 odm/lib64/libxmi_high_dynamic_range_cdsp.so
 odm/lib64/libxmi_high_dynamic_range.so
 odm/lib64/libxmi_slow_motion_mein.so
-odm/lib64/camera/aon_front.pb
 odm/lib64/libailab_rawhdr.so
 odm/lib64/libarcsoft_super_night_detection.so
 odm/lib64/libdeflickerNM.so
@@ -1342,19 +1336,6 @@ odm/lib/camera/com.qti.tuned.ishtar_semco_imx858_ultra.bin
 odm/lib/camera/com.qti.tuned.ishtar_semco_imx989_wide.bin
 odm/lib/camera/com.qti.tuned.ishtar_sunny_ov32c_front.bin
 odm/lib64/camera/aon_front.pb
-odm/lib64/camera/components/com.mi.node.aiasd.so
-odm/lib64/camera/components/com.mi.node.facealign.so
-odm/lib64/camera/components/com.mi.node.frontbokeh.so
-odm/lib64/camera/components/com.mi.node.hdr.so
-odm/lib64/camera/components/com.mi.node.realtimebokeh.so
-odm/lib64/camera/components/com.mi.node.rearvideo.so
-odm/lib64/camera/components/com.mi.node.skinbeautifier.so
-odm/lib64/camera/components/com.mi.node.tsskinbeautifier.so
-odm/lib64/camera/components/com.mi.node.videonight.so
-odm/lib64/camera/components/com.qti.node.ldc.so
-odm/lib64/camera/components/com.qti.node.remosaic.so
-odm/lib64/camera/components/com.xiaomi.node.alpha_blending.so
-odm/lib64/camera/components/com.xiaomi.node.smooth_transition.so
 odm/lib64/camera/com.qti.actuator.ishtar_semco_imx858_ak7314_tele3x_actuator.so
 odm/lib64/camera/com.qti.actuator.ishtar_semco_imx858_ak7316_ultra_actuator.so
 odm/lib64/camera/com.qti.actuator.ishtar_semco_imx858_sem1217s_tele5x_actuator.so
@@ -1401,23 +1382,12 @@ vendor/lib64/libOpenCL.so:system/priv-app/MiuiCamera/lib/arm64/libOpenCL.so
 vendor/lib64/libSNPE.so:system/lib64/libSNPE.so
 
 # Computer vision
-vendor/etc/eva/facedetection/model3.dat
 vendor/lib64/libFace3DTA.so
 vendor/lib64/libFace3D_hlos.so
 vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/libcv_common.so
-vendor/lib64/libeva.so
-vendor/lib64/libeva_util.so
 vendor/lib64/libface3d_dev.so
-vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
-vendor/lib64/libscveCommon.so
-vendor/lib64/libscveCommon_stub.so
-vendor/lib64/libscveObjectSegmentation.so
-vendor/lib64/libscveObjectSegmentation_stub.so
-vendor/lib64/libscveObjectTracker.so
-vendor/lib64/libscveObjectTracker_stub.so
-vendor/lib64/libvideoutils.so
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -1529,52 +1499,6 @@ vendor/etc/seccomp_policy/qwesd@2.0.policy
 # Consumer IR
 odm/lib64/hw/consumerir.qcom.so:vendor/lib64/hw/consumerir.qcom.so
 
-# CVE (firmware)
-odm/firmware/evass.b00
-odm/firmware/evass.b01
-odm/firmware/evass.b02
-odm/firmware/evass.b03
-odm/firmware/evass.b04
-odm/firmware/evass.b05
-odm/firmware/evass.b06
-odm/firmware/evass.b07
-odm/firmware/evass.b08
-odm/firmware/evass.b09
-odm/firmware/evass.b10
-odm/firmware/evass.b11
-odm/firmware/evass.b12
-odm/firmware/evass.b13
-odm/firmware/evass.b14
-odm/firmware/evass.b15
-odm/firmware/evass.b16
-odm/firmware/evass.b17
-odm/firmware/evass.b18
-odm/firmware/evass.b19
-odm/firmware/evass.mbn
-odm/firmware/evass.mdt
-vendor/firmware/evass.b00
-vendor/firmware/evass.b01
-vendor/firmware/evass.b02
-vendor/firmware/evass.b03
-vendor/firmware/evass.b04
-vendor/firmware/evass.b05
-vendor/firmware/evass.b06
-vendor/firmware/evass.b07
-vendor/firmware/evass.b08
-vendor/firmware/evass.b09
-vendor/firmware/evass.b10
-vendor/firmware/evass.b11
-vendor/firmware/evass.b12
-vendor/firmware/evass.b13
-vendor/firmware/evass.b14
-vendor/firmware/evass.b15
-vendor/firmware/evass.b16
-vendor/firmware/evass.b17
-vendor/firmware/evass.b18
-vendor/firmware/evass.b19
-vendor/firmware/evass.mbn
-vendor/firmware/evass.mdt
-
 # Data
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
@@ -1592,7 +1516,6 @@ vendor/etc/init/ipa_fws.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
 vendor/etc/init/shsusrd.rc
-vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
@@ -1615,7 +1538,6 @@ vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
-vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 
 # Diag
 system_ext/lib/vendor.qti.diaghal@1.0.so
@@ -1679,10 +1601,8 @@ vendor/lib64/libclstc_tm.so
 vendor/lib64/libdigital-dimming.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libhdr_backlight_adapter.so
 vendor/lib64/libintervmipc.so
 vendor/lib64/libmm-hdcpmgr.so
-vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqrtrclient.so
 vendor/lib64/libqseed3.so
 vendor/lib64/librcmask.so
@@ -1847,11 +1767,32 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # EVA
 vendor/etc/eva/facedetection/model3.dat
-vendor/lib64/libcv_common.so
 vendor/lib64/libeva.so
 vendor/lib64/libeva_util.so
 
 # EVA firmware
+odm/firmware/evass.b00
+odm/firmware/evass.b01
+odm/firmware/evass.b02
+odm/firmware/evass.b03
+odm/firmware/evass.b04
+odm/firmware/evass.b05
+odm/firmware/evass.b06
+odm/firmware/evass.b07
+odm/firmware/evass.b08
+odm/firmware/evass.b09
+odm/firmware/evass.b10
+odm/firmware/evass.b11
+odm/firmware/evass.b12
+odm/firmware/evass.b13
+odm/firmware/evass.b14
+odm/firmware/evass.b15
+odm/firmware/evass.b16
+odm/firmware/evass.b17
+odm/firmware/evass.b18
+odm/firmware/evass.b19
+odm/firmware/evass.mbn
+odm/firmware/evass.mdt
 vendor/firmware/evass.b00
 vendor/firmware/evass.b01
 vendor/firmware/evass.b02
@@ -1941,8 +1882,6 @@ odm/firmware/a740_zap.b02
 odm/firmware/a740_zap.elf:vendor/firmware/a740_zap.elf
 odm/firmware/a740_zap.mbn
 odm/firmware/a740_zap.mdt
-vendor/firmware/a740_sqe.fw
-vendor/firmware/gmu_gen70200.bin
 
 # Graphics (Adreno firmware vendor)
 vendor/gpu/kbc/sequence_manifest.bin
@@ -1957,7 +1896,6 @@ vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
 # GNSS
-vendor/etc/sap.conf
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/garden_app
@@ -1993,14 +1931,12 @@ vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
 vendor/lib64/libasn1crtx.so
 vendor/lib64/libbatching.so
-vendor/lib64/libcacertclient.so
 vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libengineplugin.so
 vendor/lib64/libgarden.so
 vendor/lib64/libgarden_haltests_e2e.so
-vendor/lib64/libgdtap.so
 vendor/lib64/libgdtap.so
 vendor/lib64/libgeofencing.so
 vendor/lib64/libgnss.so
@@ -2072,7 +2008,6 @@ vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libqtikeymint.so
-vendor/lib64/libspcom.so
 
 # Limits
 vendor/bin/hw/vendor.qti.hardware.limits@1.2-service
@@ -2429,8 +2364,6 @@ vendor/lib64/libappclassifier.so|447fc1686d5176d4e28128ee4a5abd4825a98028
 vendor/lib64/liblearningmodule.so|72a1f36e6cdfd9638f2a9a0a4863bf3750121663
 vendor/lib64/liblightninglaunches.so|cb2d200df8bef3edf91be873455cbc4d2a96e587
 vendor/lib64/liblmutils-ns.so|9f03725b8776bec40b94796339823714b3423356
-vendor/lib64/liblmutils-ns.so|9f03725b8776bec40b94796339823714b3423356
-vendor/lib64/libmemperfd.so|80f93bd886465c15e229a0a22f4220479f927a19
 vendor/lib64/libmemperfd.so|80f93bd886465c15e229a0a22f4220479f927a19
 vendor/lib64/libmeters-ns.so|b10778db11cc6f445f256584027f4d11ce8b27c2
 vendor/lib64/libmeters.so|787130034edcbd4d717014ee061dda14e052502d
@@ -2528,7 +2461,6 @@ vendor/etc/qguard.json
 system/etc/sysconfig/qti_whitelist.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
-vendor/bin/init.qti.write.sh
 vendor/bin/irsc_util
 vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
@@ -2645,7 +2577,6 @@ system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
-system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
@@ -2657,8 +2588,6 @@ vendor/bin/ipacm-diag
 vendor/bin/hw/qcrilNrd
 vendor/bin/ks
 vendor/bin/qms
-vendor/bin/qtigetprop
-vendor/bin/qtisetprop
 vendor/bin/ssgqmigd
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdaemon.rc
@@ -2875,7 +2804,6 @@ vendor/lib64/libscveObjectTracker_stub.so
 # SMC Invoke
 vendor/etc/ssg/ta_config.json
 vendor/lib64/libminkdescriptor.so
-vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libqcbor.so
 
 # Secure element
@@ -2897,7 +2825,6 @@ vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
-vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libnanopb.so
 vendor/lib64/libprotobuf-cpp-full-3.9.1.so
@@ -2986,7 +2913,6 @@ odm/lib64/libssccalapi@2.0.so
 odm/lib64/libsensor_cal@2.0.so
 odm/lib64/libclient2slpi.notifier.so
 odm/lib64/sensors.touch.detect.so
-odm/lib64/subwaystate.hal.so
 odm/lib64/vl53l5.core.so
 odm/lib64/vl53l5.hal@1.0.so
 odm/lib64/vl53l5.hal@2.0.so
@@ -3110,7 +3036,6 @@ vendor/bin/trusteduilistener
 vendor/etc/init/trusteduilistener.rc
 vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib64/android.hidl.memory.block@1.0.so
 vendor/lib64/libTouchInputVM.so
 vendor/lib64/libTrustedInput.so
 vendor/lib64/libTrustedInputTZ.so
@@ -3123,7 +3048,6 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libsi.so
-vendor/lib64/vendor.qti.hardware.systemhelper@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
@@ -3198,7 +3122,6 @@ system_ext/etc/seccomp_policy/wfdservice.policy
 system_ext/etc/seccomp_policy/wfdservice64.policy
 system_ext/etc/wfdconfigsink.xml
 system_ext/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
-system_ext/lib64/libmmparser_lite.so
 system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
 system_ext/lib64/libwfdavenhancements.so
@@ -3233,13 +3156,11 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.wifidisplaysession-service.xml
 vendor/etc/wfdconfig.xml
 vendor/lib64/hw/vendor.qti.hardware.wifidisplaysession@1.0-impl.so
 vendor/lib64/libFileMux_proprietary.so
-vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libmmrtpdecoder_vendor.so
 vendor/lib64/libmmrtpencoder_vendor.so
 vendor/lib64/libwfdcodecv4l2_proprietary.so
 vendor/lib64/libwfdcommonutils_proprietary.so
 vendor/lib64/libwfdconfigutils_proprietary.so
-vendor/lib64/libwfddisplayconfig_vendor.so
 vendor/lib64/libwfdhdcpcp.so
 vendor/lib64/libwfdhdcpservice_proprietary.so
 vendor/lib64/libwfdmminterface_proprietary.so
