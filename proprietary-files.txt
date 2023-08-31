@@ -1566,6 +1566,7 @@ vendor/lib64/libpichdralgo.so
 # Display (HWC)
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/bin/qdcmss
+vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
 vendor/etc/init/qdcmss.rc
 vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libdisplayconfig.qti.so
@@ -1599,12 +1600,17 @@ vendor/lib64/libclstc_algorithm_adapter.so
 vendor/lib64/libclstc_gcp_adapter.so
 vendor/lib64/libclstc_tm.so
 vendor/lib64/libdigital-dimming.so
+vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libintervmipc.so
+vendor/lib64/libgpu_tonemapper.so
+vendor/lib64/libgralloccore.so
+vendor/lib64/libgrallocutils.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libqrtrclient.so
 vendor/lib64/libqseed3.so
+vendor/lib64/libqservice.so
 vendor/lib64/librcmask.so
 vendor/lib64/libsdedrm.so
 vendor/lib64/libsdm-color.so
@@ -1614,6 +1620,7 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libvmfilexfer.so
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Displayfeature (odm)
 odm/etc/df_default.xml
@@ -3185,56 +3192,3 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
 # Xiaomi MAC address
 vendor/bin/nv_mac
-
-# test-display
-vendor/bin/init.qti.display_boot.sh
-vendor/etc/init/init.qti.display_boot.rc
-vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
-vendor/lib/libbacklight-calib.so
-vendor/lib/libdigital-dimming.so
-vendor/lib/libdisp-aba.so
-vendor/lib/libdisplayconfig.qti.so
-vendor/lib/libdisplaydebug.so
-vendor/lib/libdisplayqos.so
-vendor/lib/libdisplayskuutils.so
-vendor/lib/libdpps.so
-vendor/lib/libgpu_tonemapper.so
-vendor/lib/libgralloccore.so
-vendor/lib/libgrallocutils.so
-vendor/lib/libhdr_backlight_adapter.so
-vendor/lib/libhdr_tm.so
-vendor/lib/libmemutils.so
-vendor/lib/libqdcm-algo.so
-vendor/lib/libqdcm-json-mode-parser.so
-vendor/lib/libqdcm-mode-parser.so
-vendor/lib/libqdutils.so
-vendor/lib/libqseed3.so
-vendor/lib/libqservice.so
-vendor/lib/librcmask.so
-vendor/lib/libsdedrm.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-colormgr-algo.so
-vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmcore.so
-vendor/lib/libsdmextension.so
-vendor/lib/libsdmutils.so
-vendor/lib/libsnapdragoncolor-manager.so
-vendor/lib/libsnapdragoncolor-qdcm.so
-vendor/lib/libtestutils.so
-vendor/lib/libtinyxml2_1.so
-vendor/lib/vendor.display.color@1.0.so
-vendor/lib/vendor.display.color@1.1.so
-vendor/lib/vendor.display.color@1.2.so
-vendor/lib/vendor.display.color@1.3.so
-vendor/lib/vendor.display.color@1.4.so
-vendor/lib/vendor.display.color@1.5.so
-vendor/lib/vendor.display.color@1.6.so
-vendor/lib/vendor.display.color@1.7.so
-vendor/lib/vendor.display.postproc@1.0.so
-vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
-vendor/lib64/libdisplaydebug.so
-vendor/lib64/libgpu_tonemapper.so
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
-vendor/lib64/libqservice.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
