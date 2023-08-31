@@ -51,21 +51,3 @@ prebuilt_etc {
     src: "ueventd.qcom.rc",
     vendor: true,
 }
-
-sh_binary {
-    name: "init.class_main.sh",
-    src: "init.class_main.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.early_boot.sh",
-    src: "init.qcom.early_boot.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.sh",
-    src: "init.qcom.sh",
-    vendor: true,
-}
