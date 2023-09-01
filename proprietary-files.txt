@@ -1497,7 +1497,10 @@ vendor/etc/init/ssgtzd.rc
 vendor/etc/seccomp_policy/qwesd@2.0.policy
 
 # Consumer IR
-odm/lib64/hw/consumerir.qcom.so:vendor/lib64/hw/consumerir.qcom.so
+odm/lib64/hw/consumerir.qcom.so
+vendor/etc/init/android.hardware.ir-service.example.rc
+vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml
+vendor/bin/hw/android.hardware.ir-service.example
 
 # Data
 vendor/bin/ATFWD-daemon
