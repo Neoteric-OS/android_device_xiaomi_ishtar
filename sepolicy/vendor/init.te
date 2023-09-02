@@ -1,54 +1,9 @@
 allow init ddr_training_exec:file { execute getattr open read };
 allow init slad_exec:file { getattr open read };
 allow init sla_data_file:file rw_file_perms;
-allow init video_device:chr_file { ioctl };
-allow init vendor_file:file { execute };
-allow init self:netlink_generic_socket { read };
-allow init self:capability2 { wake_alarm };
-allow init self:netlink_kobject_uevent_socket { create };
-allow init self:netlink_kobject_uevent_socket { setopt };
-allow init self:netlink_kobject_uevent_socket { getopt };
-allow init self:netlink_kobject_uevent_socket { bind };
-allow init same_process_hal_file:file { execute };
-allow init self:qipcrtr_socket { create };
-allow init vendor_ssgtzd_socket:sock_file { write };
-allow init vendor_ssgtzd:unix_stream_socket { connectto };
-allow init sysfs_touch_suspend:file { write };
-allow init sysfs_touch_suspend:file { open };
-allow init sysfs_touch_hostprocess:file { write };
-allow init sysfs_touch_hostprocess:file { open };
-allow init touchfeature_device:chr_file { map };
-allow init touchfeature_device:chr_file { read };
-allow init touchfeature_device:chr_file { write };
-allow init touchfeature_device:chr_file { open };
-allow init sysfs_tp_virtual_prox:file { write };
-allow init sysfs_tp_virtual_prox:file { open };
-allow init proc_tp_file:file { read };
-allow init proc_tp_file:file { write };
-allow init proc_tp_file:file { open };
-allow init touchfeature_device:chr_file { ioctl };
-allow init self:netlink_kobject_uevent_socket { read };
-allow init vendor_data_file:dir { watch };
-allow init self:qipcrtr_socket { getattr };
-allow init self:qipcrtr_socket { write };
-allow init self:qipcrtr_socket { read };
-allow init self:qipcrtr_socket { setopt };
-allow init vendor_displayfeature_device:chr_file { read };
-allow init vendor_displayfeature_device:chr_file { open };
-allow init vendor_displayfeature_device:chr_file { ioctl };
-allow init hal_graphics_allocator_default:fd { use };
-allow init vendor_sysfs_graphics:file { open };
-allow init vendor_sysfs_displayfeature:file { open };
-allow init vendor_persist_sensors_file:file { watch watch_reads };
-allow init stmvl53l5_device:chr_file { read write };
-allow init stmvl53l5_device:chr_file { open };
-allow init stmvl53l5_device:chr_file { ioctl };
-allow init vendor_xdsp_device:chr_file { read };
-allow init vendor_xdsp_device:chr_file { open };
-allow init vendor_xdsp_device:chr_file { ioctl };
-allow init dmabuf_system_heap_device:chr_file { ioctl };
-allow init hci_attach_dev:chr_file { ioctl };
-allow init touchfeature_device:chr_file { read write };
+allow init hal_touchfeature_xiaomi_default_exec:file { read getattr map execute open };
+allow init vendor_touch_init_shell_exec:file { read getattr map execute open };
+allow init tpevent_exec:file { read getattr map execute open };
 allow vendor_init vendor_ddr_prop:property_service set;
 set_prop(vendor_init, vendor_fp_prop)
 set_prop(vendor_init, vendor_fp_info_prop)
@@ -57,5 +12,5 @@ set_prop(vendor_init, vendor_nfc_mi_prop)
 set_prop(vendor_init, vendor_ssr_prop)
 set_prop(vendor_init, vendor_edgnss_qxwz_downloadak_prop)
 set_prop(vendor_init, vendor_qcc_prop)
-set_prop(vendor_init, vendor_displayfeature_prop)
 allow vendor_init cgroup:file getattr;
+userdebug_or_eng(`allow init debugfs_tracing_debug:dir mounton;');
