@@ -3073,6 +3073,14 @@ vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk
 vendor/bin/init.qcom.usb.sh
 vendor/etc/init/hw/init.qcom.usb.rc
 
+# Vibrator
+odm/firmware/0_click_P_RTP.bin:vendor/firmware/0_click_P_RTP.bin
+odm/firmware/1_doubelClick_P_RTP.bin:vendor/firmware/1_doubelClick_P_RTP.bin
+odm/firmware/2_tick_P_RTP.bin:vendor/firmware/2_tick_P_RTP.bin
+odm/firmware/3_thud_P_RTP.bin:vendor/firmware/3_thud_P_RTP.bin
+odm/firmware/4_pop_P_RTP.bin:vendor/firmware/4_pop_P_RTP.bin
+odm/firmware/5_heavyClick_P_RTP.bin:vendor/firmware/5_heavyClick_P_RTP.bin
+
 # Video
 vendor/lib/libstreamparser.so
 vendor/lib/libvideotxr.so
