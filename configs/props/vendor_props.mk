@@ -191,6 +191,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Display
 PRODUCT_VENDOR_PROPERTIES += \
+    persist.sys.sf.native_mode=258 \
     ro.vendor.display.ai_disp.enable=true \
     ro.vendor.display.mi_calib.enable=true \
     ro.vendor.display.nature_mode.enable=true \
