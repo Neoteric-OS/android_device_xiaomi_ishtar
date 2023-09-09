@@ -1,0 +1,5 @@
+allow vendor_hal_gnss_qti socket_device:dir { write };
+allow vendor_hal_gnss_qti socket_device:dir { add_name };
+allow vendor_hal_gnss_qti socket_device:sock_file { create };
+allow vendor_hal_gnss_qti sysfs:file { read };
+allow vendor_hal_gnss_qti sysfs:file { open };

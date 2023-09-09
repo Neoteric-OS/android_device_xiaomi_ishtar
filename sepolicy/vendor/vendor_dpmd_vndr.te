@@ -1,0 +1,6 @@
+allow vendor_dpmd_vndr vndbinder_device:chr_file { read };
+allow vendor_dpmd_vndr vndbinder_device:chr_file { write };
+allow vendor_dpmd_vndr vndbinder_device:chr_file { open };
+allow vendor_dpmd_vndr vndbinder_device:chr_file { ioctl };
+allow vendor_dpmd_vndr vndbinder_device:chr_file { map };
+binder_call(vendor_dpmd_vndr, vndservicemanager)

@@ -1,0 +1,2 @@
+allow vendor_wcnss_service sysfs:file { read };
+allow vendor_wcnss_service sysfs:file { open };

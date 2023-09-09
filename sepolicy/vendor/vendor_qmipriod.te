@@ -1,0 +1,2 @@
+allow vendor_qmipriod sysfs:file { read };
+allow vendor_qmipriod sysfs:file { open };

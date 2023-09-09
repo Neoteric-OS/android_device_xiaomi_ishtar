@@ -1,0 +1,5 @@
+allow vendor_location vndbinder_device:chr_file { read };
+allow vendor_location vndbinder_device:chr_file { write };
+allow vendor_location vndbinder_device:chr_file { open };
+allow vendor_location vndbinder_device:chr_file { ioctl };
+allow vendor_location vndbinder_device:chr_file { map };

@@ -48,9 +48,6 @@
 /dev/mi_display/disp_feature                                                                  u:object_r:vendor_displayfeature_device:s0
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)?                            u:object_r:vendor_sysfs_displayfeature:s0
 
-# Consumer IR
-/dev/ir_spi                                          u:object_r:ir_spi_device:s0
-
 # Dolby
 /data/vendor/dolby(/.*)?                                                                      u:object_r:vendor_data_file:s0
 /vendor/bin/hw/dolbycodec2                                                                    u:object_r:vendorcodec_exec:s0
@@ -74,9 +71,6 @@
 # Mac Address
 /data/vendor/mac_addr(/.*)?                                                                  u:object_r:vendor_mac_vendor_data_file:s0
 /vendor/bin/nv_mac                                                                           u:object_r:vendor_wcnss_service_exec:s0
-
-# Mi RIC
-/vendor/bin/MI_RIC                                                                           u:object_r:mi_ric_exec:s0
 
 # Mlipay
 /(vendor|system/vendor)/bin/fidoca                                                           u:object_r:hal_mfidoca_default_exec:s0
@@ -110,9 +104,6 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.sla\.service\@1\.0-service                       u:object_r:hal_slaservice_qti_exec:s0
 /data/vendor/sla(/.*)?                                                                       u:object_r:sla_data_file:s0
 /dev/socket/slad                                                                             u:object_r:slad_socket:s0
-
-# Laser autofocus
-/dev/stmvl53l5                                       u:object_r:stmvl53l5_device:s0
 
 # Thermal
 /(vendor|system/vendor)/bin/mi_thermald                                                      u:object_r:mi_thermald_exec:s0
