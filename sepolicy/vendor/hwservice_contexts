@@ -3,6 +3,8 @@ vendor.xiaomi.hardware.displayfeature::IDisplayFeature       u:object_r:vendor_h
 vendor.xiaomi.hardware.micharge::IMiCharge                   u:object_r:vendor_hal_micharge_xiaomi_hwservice:s0
 vendor.xiaomi.hw.touchfeature::ITouchFeature                 u:object_r:hal_touchfeature_xiaomi_hwservice:s0
 vendor.qti.sla.service::ISlaService                          u:object_r:hal_slaservice_hwservice:s0
+vendor.qti.hardware.radio.am::IQcRilAudio    u:object_r:hal_telephony_hwservice:s0
+vendor.qti.qcril.am::IQcRilAudio             u:object_r:hal_telephony_hwservice:s0
 vendor.xiaomi.sensor.citsensorservice::ICitSensorService   u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0
 vendor.xiaomi.sensor.communicate::ISensorCommunicate  u:object_r:vendor_hal_sensorcommunicate_hwservice:s0
 vendor.xiaomi.hardware.quickcamera::IQuickCameraService    u:object_r:hal_quickcamera_hwservice:s0
