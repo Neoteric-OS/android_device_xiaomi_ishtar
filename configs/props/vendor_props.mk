@@ -275,6 +275,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Graphics
 PRODUCT_VENDOR_PROPERTIES += \
     debug.egl.hw=0 \
+    debug.hwui.use_hint_manager=true \
+    debug.hwui.target_cpu_time_percent=30 \
     debug.sf.hw=0 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.disable_client_composition_cache=1 \
