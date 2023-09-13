@@ -524,6 +524,9 @@ PRODUCT_COPY_FILES += \
 # Vibrator
 $(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
 
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-V1-ndk_platform.vendor
+
 # VNDK
 PRODUCT_PACKAGES += \
     vndservicemanager
