@@ -232,7 +232,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.histogram.enable=true \
     ro.vendor.localhbm.enable=true \
     ro.vendor.soft_backlight.enable=true \
-    ro.vendor.sre.enable=true \
     ro.vendor.standard.video.enable=true \
     ro.vendor.thermal.dimming.enable=true \
     ro.vendor.touchfeature.type=183 \

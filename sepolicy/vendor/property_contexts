@@ -82,7 +82,6 @@ ro.vendor.pcc.dc.enable u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.sdr2hdr.by.layer.support u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.sf.enable_fb_scaling u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.soft_backlight.enable u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.sre.enable u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.standard.video.enable u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.thermal.dimming.enable u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.use.partial.brightness u:object_r:vendor_displayfeature_prop:s0
