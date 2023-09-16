@@ -526,3 +526,10 @@ on property:vendor.minetd.low_budget=0
 on property:vendor.minetd.low_budget=1
     write /proc/sys/net/core/netdev_budget_usecs "1000"
     write /proc/sys/net/core/dev_weight "1"
+
+service citsensor-hal-2-0 /odm/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
+    class late_start
+    user system
+    group system input
+    override
+    task_profiles ServiceCapacityLow
