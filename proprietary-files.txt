@@ -2442,7 +2442,6 @@ vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
 # QCOM system daemon
-vendor/bin/qcom-system-daemon
 vendor/lib64/libsubsystem_control.so
 
 # QCV
