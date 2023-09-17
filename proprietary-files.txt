@@ -1555,6 +1555,10 @@ vendor/lib64/vendor.qti.diaghal@1.0.so
 odm/etc/display/qdcm_calib_data_xiaomi_42_02_0a_cmd_mode_dsc_dsi_panel.json
 odm/etc/mdss_dsi_m1_42_02_0a_dsc_cmd_mi.xml
 
+# Display (Config)
+product/etc/displayconfig/display_id_4630946545580055171.xml:vendor/etc/displayconfig/display_id_4630946545580055171.xml
+product/etc/displayconfig/display_id_4630947134992368259.xml:vendor/etc/displayconfig/display_id_4630947134992368259.xml
+
 # Display (HDR)
 vendor/lib64/libhdr_backlight_adapter.so
 vendor/lib64/libhdr_hbm.so
