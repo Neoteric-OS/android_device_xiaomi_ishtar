@@ -2240,6 +2240,8 @@ vendor/etc/sn100u_pnx_ese_sn.pnscr
 vendor/etc/sn100u_pnx_ndi.pnscr
 vendor/etc/sn100u_pnx_pcv.pnscr
 vendor/etc/sn100u_pnx_sst.pnscr
+vendor/firmware/st54j_fw.bin
+vendor/firmware/st54k_conf_38.4MHz.bin
 vendor/lib/libsn100u_fw.so
 vendor/lib/libsn220u_fw.so
 vendor/lib/libvui_dmgr.so
