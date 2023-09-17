@@ -3210,6 +3210,11 @@ vendor/lib64/libsxrservice.so
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
+# Thermal
+vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2
+vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
+vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
+
 # Thermal engine
 vendor/bin/mi_thermald
 vendor/bin/thermal-engine-v2
