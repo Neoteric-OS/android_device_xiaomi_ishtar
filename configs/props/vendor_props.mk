@@ -334,7 +334,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # QMI
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.qcomsysd.enabled=1 \
     ro.vendor.qspm.enable=true
 
 # RIL
