@@ -16,6 +16,7 @@ $(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
 # Pixel Experience additions
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_INCLUDE_CARRIER_SETTINGS := true
+TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT = true
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1440
