@@ -2573,6 +2573,8 @@ product/etc/permissions/UimGba.xml
 product/etc/permissions/UimGbaManager.xml
 product/etc/permissions/UimService.xml
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
+product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
+product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
 product/framework/remotesimlockmanagerlibrary.jar
 product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
@@ -2837,8 +2839,10 @@ vendor/bin/ssgqmigd
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/init/ipacm-diag.rc
+vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/qcrilNrd.rc
 vendor/etc/init/qms.rc
+vendor/etc/permissions/noRil/apq_excluded_telephony_features.xml
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql
 vendor/etc/qcril_database/upgrade/config/11.0_config.sql
 vendor/etc/qcril_database/upgrade/config/12.0_config.sql
@@ -2879,6 +2883,7 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.ims.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
 vendor/etc/telephony_packages.xml
+vendor/lib64/qsysd-diag-plugin/libffbmdiagplugin.so
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so
@@ -2901,6 +2906,8 @@ vendor/lib64/lib-rtpcore.so
 vendor/lib64/lib-rtpsl.so
 vendor/lib64/libQtiRilLoadable.so
 vendor/lib64/liblqe.so
+vendor/lib64/libnfnetlink.so
+vendor/lib64/libnetfilter_conntrack.so
 vendor/lib64/libqcrilDataModule.so
 vendor/lib64/libqcrilNr.so
 vendor/lib64/libqcrilNrCellInfoModule.so
@@ -2919,11 +2926,14 @@ vendor/lib64/libqcrildataqos.so
 vendor/lib64/libqdpr.so
 vendor/lib64/libqms_client.so
 vendor/lib64/librcc.so
+vendor/lib64/libril.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-legacy.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
+vendor/lib64/librilutils.so
 vendor/lib64/librilqmimiscservices.so
+vendor/lib64/librmnetctl.so
 vendor/lib64/libxiaomi_qcril.so
 vendor/lib64/qcrilInterfaces.so
 vendor/lib64/qcrilMarshal.so
