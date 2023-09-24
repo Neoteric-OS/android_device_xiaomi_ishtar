@@ -59,3 +59,5 @@ allow hal_camera_default proc_pressure_mem:file { open getattr };
 allow hal_camera_default proc_pressure_cpu:file { open getattr };
 allow hal_camera_default vendor_sysfs_kgsl:file { open read };
 allow hal_camera_default sysfs_wake_lock:file { read write };
+allow hal_camera_default proc_pressure_io:file { open getattr };
+allow hal_camera_default proc_meminfo:file { open read };
