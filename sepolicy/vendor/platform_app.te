@@ -1,8 +1,10 @@
 allow platform_app vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager { find };
-allow platform_app adsprpcd_file:dir { search };
-allow platform_app adsprpcd_file:dir { getattr };
-allow platform_app vendor_xdsp_device:chr_file { read };
+allow platform_app adsprpcd_file:dir { read search getattr };
+allow platform_app vendor_xdsp_device:chr_file { open read };
 allow platform_app hal_dms_hwservice:hwservice_manager find;
+allow platform_app vendor_file:dir { watch };
+allow platform_app adsprpcd_file:dir { watch };
+allow platform_app vendor_qdsp_device:chr_file { read open };
 binder_call(platform_app, hal_camera_default)
 binder_call(platform_app, hal_dms_default)
 get_prop(platform_app, vendor_display_prop)
