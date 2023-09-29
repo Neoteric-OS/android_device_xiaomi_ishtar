@@ -407,6 +407,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/kalama/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.ishtar
+
 # Properties
 include $(DEVICE_PATH)/configs/props/odm_props.mk
 include $(DEVICE_PATH)/configs/props/product_prop.mk
