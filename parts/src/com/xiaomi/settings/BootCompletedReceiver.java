@@ -13,6 +13,7 @@ import android.os.UserHandle;
 import android.util.Log;
 
 import com.xiaomi.settings.display.ColorModeService;
+import com.xiaomi.settings.doze.AodBrightnessService;
 import com.xiaomi.settings.touch.AlwaysOnFingerprintService;
 import com.xiaomi.settings.touch.TouchPollingRateService;
 import com.xiaomi.settings.doze.PocketService;
@@ -28,6 +29,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             return;
         }
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
+
+        // AOD
+        context.startServiceAsUser(new Intent(context, AodBrightnessService.class),
+                UserHandle.CURRENT);
 
         // Display
         context.startServiceAsUser(new Intent(context, ColorModeService.class),
