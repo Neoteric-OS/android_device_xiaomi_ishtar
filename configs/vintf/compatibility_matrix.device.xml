@@ -1307,4 +1307,12 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- Custom Touch HAL -->
+    <hal format="aidl" optional="true">
+        <name>vendor.aospa.touchfeature</name>
+        <interface>
+            <name>ITouchFeature</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
