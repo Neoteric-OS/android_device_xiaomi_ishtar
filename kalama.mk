@@ -268,7 +268,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.ishtar.rc \
-    init.mi_touch.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
