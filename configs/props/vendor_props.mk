@@ -17,6 +17,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.ambisonic.auto.profile=false \
     persist.vendor.audio.ambisonic.capture=false \
     persist.vendor.audio.apptype.multirec.enabled=false \
+    persist.vendor.audio.auto.scenario=true \
     persist.vendor.audio.avs.afe_api_version=2 \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.tmic.enabled=false \
