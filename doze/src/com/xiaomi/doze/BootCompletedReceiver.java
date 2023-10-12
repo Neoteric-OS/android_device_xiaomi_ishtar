@@ -27,6 +27,7 @@ import android.view.SurfaceControl;
 import android.util.Log;
 
 import com.xiaomi.doze.DozeUtils;
+import com.xiaomi.doze.PocketService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -47,6 +48,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         SurfaceControl.overrideHdrTypes(displayToken, new int[]{
                HdrCapabilities.HDR_TYPE_DOLBY_VISION, HdrCapabilities.HDR_TYPE_HDR10,
                HdrCapabilities.HDR_TYPE_HLG, HdrCapabilities.HDR_TYPE_HDR10_PLUS});
+
+        // Pocket
+        PocketService.startService(context);
 
     }
 }

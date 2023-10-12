@@ -65,5 +65,10 @@
                 android:value="1001" />
         </activity>
 
+        <service
+            android:name=".doze.PocketService"
+            android:permission="PocketService">
+        </service>
+
     </application>
 </manifest>
