@@ -214,7 +214,7 @@ PRODUCT_PACKAGES += \
 
 # Identity
 PRODUCT_PACKAGES += \
-    android.hardware.identity-V3-ndk_platform.vendor
+    android.hardware.identity-V3-ndk.vendor
 
 # Init
 PRODUCT_PACKAGES += \
@@ -273,7 +273,7 @@ PRODUCT_COPY_FILES += \
 
 # Neural networks
 PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks-V1-ndk_platform.vendor
+    android.hardware.neuralnetworks-V1-ndk.vendor
 
 # NFC
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
