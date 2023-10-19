@@ -211,6 +211,11 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000 16000 24000 44100 48000" channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO"/>
                 </devicePort>
+                <devicePort tagName="BT BLE Broadcast" type="AUDIO_DEVICE_OUT_BLE_BROADCAST" role="sink"
+                            encodedFormats="AUDIO_FORMAT_LC3">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="8000 16000 32000 48000" channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO"/>
+                </devicePort>
             </devicePorts>
             <routes>
                 <route type="mix" sink="Earpiece"
@@ -256,6 +261,8 @@
                        sources="primary output,raw,mmap_no_irq_out,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT BLE Speaker"
                        sources="primary output,raw,mmap_no_irq_out,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+                <route type="mix" sink="BT BLE Broadcast"
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload"/>
             </routes>
         </module>
 
