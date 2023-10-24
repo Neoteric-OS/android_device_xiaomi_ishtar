@@ -62,3 +62,4 @@ genfscon sysfs /devices/virtual/touch/touch_dev/touch_irq_no u:object_r:sysfs_to
 genfscon sysfs /devices/virtual/touch/touch_dev/palm_sensor u:object_r:sysfs_tp_virtual_prox:s0
 genfscon sysfs /devices/virtual/touch/touch_dev/hold_sensor u:object_r:sysfs_tp_virtual_prox:s0
 genfscon sysfs /devices/virtual/touch/touch_dev/ear_sensor u:object_r:sysfs_tp_virtual_prox:s0
+genfscon sysfs /sys/class/touch/touch_dev/palm_sensor u:object_r:sysfs_touchpanel:s0
