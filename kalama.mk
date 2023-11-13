@@ -510,7 +510,6 @@ PRODUCT_PACKAGES += \
 
 # Trusted User Interface (TUI)
 PRODUCT_PACKAGES += \
-    android.hidl.memory.block@1.0.vendor \
     vendor.qti.hardware.systemhelper@1.0.vendor
 
 # Update engine
