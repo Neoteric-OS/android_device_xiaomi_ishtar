@@ -406,7 +406,7 @@ PRODUCT_COPY_FILES += \
 
 # PowerShare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.ishtar
+    vendor.aospa.powershare-service
 
 # Properties
 include $(DEVICE_PATH)/configs/props/odm_props.mk

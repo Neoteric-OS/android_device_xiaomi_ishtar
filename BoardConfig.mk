@@ -168,6 +168,9 @@ TARGET_BOARD_PLATFORM := kalama
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
+# PowerShare
+TARGET_POWERSHARE_NODE := /sys/class/qcom-battery/reverse_chg_mode
+
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
