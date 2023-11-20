@@ -449,4 +449,7 @@
          Otherwise, the device may fail to wake out of suspend reliably.
          The default is false. -->
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
+
+    <!-- If device supports pickup/lift gesture -->
+    <bool name="config_dozePulsePickup">true</bool>
 </resources>
