@@ -361,7 +361,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     perf \
     telephony \
-    usb
+    usb \
+    wlan
 
 TARGET_USE_AIDL_QTI_HEALTH := true
 
@@ -434,15 +435,6 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # WiFi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
-    hostapd \
-    libwpa_client \
-    libwifi-hal-ctrl \
-    libwifi-hal-qcom \
-    wpa_supplicant \
-    wpa_supplicant.conf
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
