@@ -165,9 +165,6 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kalama
 
-# Power
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
-
 # PowerShare
 TARGET_POWERSHARE_NODE := /sys/class/qcom-battery/reverse_chg_mode
 
