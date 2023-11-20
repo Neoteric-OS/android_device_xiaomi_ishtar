@@ -105,7 +105,6 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET := 0x01000000
 
 BOARD_KERNEL_CMDLINE := \
-    video=vfb:640x400,bpp=32,memsize=3072000 \
     kasan=off \
     disable_dma32=on \
     bootinfo.fingerprint=$(CUSTOM_VERSION) \
