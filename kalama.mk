@@ -443,6 +443,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0 \
     android.hardware.sensors-service.multihal \
     sensors.dynamic_sensor_hal \
+    sensors.xiaomi \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \

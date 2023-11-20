@@ -74,6 +74,9 @@ function blob_fixup() {
         odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc)
             sed -i 's/group system input/group system input\n    task_profiles ServiceCapacityLow/' "${2}"
             ;;
+        vendor/etc/sensors/hals.conf)
+            sed -i '$a sensors.xiaomi.so' "${2}"
+            ;;
     esac
 }
 
