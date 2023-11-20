@@ -193,13 +193,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
 # GPS
-include hardware/qcom-caf/sm8550/gps/gps_vendor_product.mk
-
 PRODUCT_PACKAGES += \
     android.hardware.gnss-V1-ndk_platform.vendor
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Graphics
 PRODUCT_COPY_FILES += \
@@ -393,7 +388,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     charging \
-    display
+    display \
+    gps
 
 TARGET_USE_AIDL_QTI_HEALTH := true
 
