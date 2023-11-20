@@ -117,6 +117,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0-manager-lib
 
+# Bluetooth
+TARGET_USE_AIDL_QTI_BT_AUDIO := true
+
 # Board
 TARGET_BOARD_PLATFORM := kalama
 
