@@ -289,7 +289,6 @@ PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
     android.hardware.media.c2@1.1.vendor \
     android.hardware.media.c2@1.2.vendor \
-    libavservices_minijail \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor \
     libcodec2_soft_common.vendor \
@@ -415,6 +414,7 @@ PRODUCT_PACKAGES += \
 
 # QTI components
 TARGET_COMMON_QTI_COMPONENTS := \
+    av \
     bt
 
 # QTI service tracker

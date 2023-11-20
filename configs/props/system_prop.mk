@@ -23,8 +23,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     media.stagefright.enable-qcp=true \
     media.stagefright.enable-scan=true \
     persist.mm.enable.prefetch=true \
-    ro.media.recorder-max-base-layer-fps=60 \
-    vendor.mm.enable.qcom_parser=16777215
+    ro.media.recorder-max-base-layer-fps=60
 
 # NFC
 PRODUCT_SYSTEM_PROPERTIES += \
