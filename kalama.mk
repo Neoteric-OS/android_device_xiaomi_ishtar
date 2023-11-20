@@ -122,6 +122,8 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 TARGET_USE_AIDL_QTI_BT_AUDIO := true
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio-V2-ndk.vendor
 
 # Board
 TARGET_BOARD_PLATFORM := kalama
@@ -134,6 +136,9 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.common-V1-ndk.vendor \
+    android.hardware.camera.device-V1-ndk.vendor \
+    android.hardware.camera.provider-V1-ndk.vendor \
     android.hardware.camera.provider@2.7.vendor \
     android.hardware.camera.common@1.0.vendor \
     camera.device@1.0-impl \
@@ -217,7 +222,7 @@ PRODUCT_PACKAGES += \
 
 # Identity
 PRODUCT_PACKAGES += \
-    android.hardware.identity-V3-ndk.vendor
+    android.hardware.identity-V4-ndk.vendor
 
 # Init
 PRODUCT_PACKAGES += \
@@ -244,7 +249,7 @@ PRODUCT_PACKAGES += \
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
-    android.hardware.security.keymint-V1-ndk.vendor \
+    android.hardware.security.keymint-V2-ndk.vendor \
     android.hardware.security.secureclock-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V1-ndk.vendor
 
