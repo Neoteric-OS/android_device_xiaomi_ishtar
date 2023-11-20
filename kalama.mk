@@ -415,7 +415,10 @@ PRODUCT_PACKAGES += \
 # QTI components
 TARGET_COMMON_QTI_COMPONENTS := \
     av \
-    bt
+    bt \
+    charging
+
+TARGET_USE_AIDL_QTI_HEALTH := true
 
 # QTI service tracker
 PRODUCT_PACKAGES += \
