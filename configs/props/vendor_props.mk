@@ -325,14 +325,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # RIL
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.radio.multisim.config=dsds \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
-    persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.dynamic_sar=1 \
     persist.vendor.radio.enable_temp_dds=true \
     persist.vendor.radio.enableadvancedscan=true \
-    persist.vendor.radio.procedure_bytes=SKIP \
-    persist.vendor.radio.sib16_support=1 \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.radio.add_power_save=1 \
