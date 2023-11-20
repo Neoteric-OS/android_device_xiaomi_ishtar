@@ -81,8 +81,6 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/aosp/config/device_framework_matrix.xml
 
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 
@@ -107,8 +105,8 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_CMDLINE := \
     kasan=off \
     disable_dma32=on \
-    bootinfo.fingerprint=$(CUSTOM_VERSION) \
-    mtdoops.fingerprint=$(CUSTOM_VERSION)
+    bootinfo.fingerprint=$(AOSPA_VERSION) \
+    mtdoops.fingerprint=$(AOSPA_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
