@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Defines the sysfs attribute path used by the device
+         to enable/disable DC dimming. -->
+    <string name="config_deviceDcDimmingSysfsNode">/dev/null</string>
+</resources>
