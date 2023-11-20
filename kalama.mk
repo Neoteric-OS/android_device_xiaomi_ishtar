@@ -347,15 +347,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-# Perf
-PRODUCT_PACKAGES += \
-    libpsi.vendor \
-    libtflite
-
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
@@ -389,7 +380,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     charging \
     display \
-    gps
+    gps \
+    perf
 
 TARGET_USE_AIDL_QTI_HEALTH := true
 
