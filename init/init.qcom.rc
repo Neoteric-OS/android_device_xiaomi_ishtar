@@ -257,6 +257,9 @@ on boot
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
 
+    # limit discard size to 128MB in order to avoid long IO latency
+    write /sys/block/sda/queue/discard_max_bytes 134217728
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
@@ -322,6 +325,9 @@ on post-fs-data
     # Create directory used by audio subsystem
     mkdir /data/vendor/audio 0777 audio audio
     mkdir /data/vendor/audio_dsp 0770 media media
+
+    # Create directory used by video subsystem
+    mkdir /data/vendor/video 0777 audio audio
 
     # Create directory for audio delta files
     mkdir /data/vendor/audio/acdbdata 0777 media audio

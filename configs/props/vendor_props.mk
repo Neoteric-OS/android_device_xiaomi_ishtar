@@ -307,6 +307,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.incremental.enable=yes
 
+# Keystore
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.keystore_desede=true
+
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.c2inputsurface=-1 \
