@@ -337,6 +337,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     FrameworksResIshtar \
+    MiuiCameraOverlay \
     PASystemUIIshtar \
     SettingsResIshtar \
     SystemUIResIshtar
