@@ -6,8 +6,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-LIBION_HEADER_PATH_WRAPPER := $(LOCAL_PATH)/libion_header_paths/libion_path.mk
-
 ifneq ($(filter ishtar,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
