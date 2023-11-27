@@ -1,6 +1,8 @@
 type hal_mtdservice_default, domain;
 type hal_mtdservice_default_exec, exec_type, file_type, vendor_file_type;
 type hal_mtdservice_hwservice, hwservice_manager_type;
+type vendor_hal_tui_comm_hwservice, hwservice_manager_type;
+type vendor_hal_tui_comm_qti, domain;
 hal_attribute(mtdservice)
 allow hal_mtdservice_client hal_mtdservice_server:binder { call transfer };
 allow hal_mtdservice_client hal_mtdservice_server:binder transfer;

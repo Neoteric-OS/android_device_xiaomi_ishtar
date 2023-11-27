@@ -6,6 +6,10 @@ allow vendor_qti_init_shell sysfs_dm:file rw_file_perms;
 allow vendor_qti_init_shell sysfs_dm:dir r_dir_perms;
 allow vendor_qti_init_shell vendor_sysfs_msm_perf:file w_file_perms;
 allow vendor_qti_init_shell vendor_sysfs_qdss_dev:file { setattr write };
+allow vendor_qti_init_shell kmsg_device:chr_file { open read write };
+allow vendor_qti_init_shell vendor_sysfs_scsi_target:file { write };
+allow vendor_qti_init_shell vendor_proc_swappiness:file { open read write };
+allow vendor_qti_init_shell vendor_sysfs_memory:file rw_file_perms;
 set_prop(vendor_qti_init_shell, vendor_panel_info_prop)
 
 #get_prop(vendor_qti_init_shell, default_prop)

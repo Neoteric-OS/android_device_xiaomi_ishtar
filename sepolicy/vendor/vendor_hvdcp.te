@@ -1,0 +1,5 @@
+allow vendor_hvdcp kmsg_device:chr_file { open read write getattr };
+allow vendor_hvdcp vendor_sysfs_iio:dir { open read };
+allow vendor_hvdcp sysfs:dir { open read };
+allow vendor_hvdcp sysfs:file { open read };
+set_prop(vendor_hvdcp, ctl_stop_prop)
