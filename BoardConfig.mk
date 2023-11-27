@@ -74,6 +74,9 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
 # Display
+SOONG_CONFIG_NAMESPACES += dolby_vision
+SOONG_CONFIG_dolby_vision += override
+SOONG_CONFIG_dolby_vision_override := true
 TARGET_SCREEN_DENSITY := 560
 
 # DTB
