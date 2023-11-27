@@ -1,4 +1,4 @@
-Copyright (C) 2023 PixelExperience
+Copyright (C) 2023 Paranoid Android
 
 Device configuration for Xiaomi 13 Ultra
 =========================================
