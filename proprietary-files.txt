@@ -2309,12 +2309,6 @@ vendor/bin/qtisetprop
 vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 
-# QTI service tracker
-vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
-vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
-vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
-
 # QVR
 vendor/bin/hw/qvrservice
 vendor/bin/qvrcameratest
