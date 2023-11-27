@@ -183,10 +183,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libdrm.vendor
 
-# DTB
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/prebuilts/dtb:dtb.img
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -240,6 +236,9 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
     IPACM_Filter_cfg.xml
+
+# Kernel Binary
+KERNEL_PREBUILT_DIR := device/xiaomi/ishtar-kernel
 
 # Keymaster
 PRODUCT_PACKAGES += \

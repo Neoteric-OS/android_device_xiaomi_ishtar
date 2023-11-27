@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/ishtar
+KERNEL_PREBUILT_DIR := device/xiaomi/ishtar-kernel
 
 # A/B
 AB_OTA_UPDATER := true
@@ -114,6 +115,7 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3
 
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
+TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 BOARD_KERNEL_IMAGE_NAME := Image
 
 BOARD_BOOT_HEADER_VERSION := 4
@@ -124,13 +126,6 @@ TARGET_KERNEL_APPEND_DTB := false
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-
-TARGET_FORCE_PREBUILT_KERNEL := true
-
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
-
-TARGET_BOARD_KERNEL_HEADERS := $(DEVICE_PATH)/prebuilts/kernel-headers
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -191,21 +186,10 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Vendor boot
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilts/modules/ramdisk/*.ko)
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/ramdisk/modules.load))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/prebuilts/modules/ramdisk/modules.blocklist
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/ramdisk/modules.load.recovery))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PREBUILT_DIR)/modules.load.recovery))
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
-
-# Vendor_dlkm
-BOARD_VENDOR_RAMDISK_FRAGMENTS := dlkm
-BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.KERNEL_MODULE_DIRS := top
-
-BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilts/modules/vendor/*.ko)
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/vendor/modules.load))
-BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE :=  $(DEVICE_PATH)/prebuilts/modules/vendor/modules.blocklist
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
