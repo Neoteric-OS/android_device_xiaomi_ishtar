@@ -14,6 +14,7 @@ import android.util.Log;
 
 import com.xiaomi.settings.touch.AlwaysOnFingerprintService;
 import com.xiaomi.settings.touch.TouchPollingRateService;
+import com.xiaomi.settings.doze.PocketService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -32,5 +33,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         context.startServiceAsUser(new Intent(context, TouchPollingRateService.class),
                 UserHandle.CURRENT);
+
+        // Pocket
+        PocketService.startService(context);
     }
 }
