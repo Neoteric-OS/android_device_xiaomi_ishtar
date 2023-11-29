@@ -305,6 +305,7 @@ vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
+vendor/etc/audio_policy_volumes.xml
 vendor/etc/card-defs.xml
 vendor/etc/kvh2xml.xml
 vendor/etc/media_codecs_vendor_audio.xml
