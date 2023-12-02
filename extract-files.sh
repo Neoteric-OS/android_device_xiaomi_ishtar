@@ -71,6 +71,9 @@ function blob_fixup() {
         odm/lib64/hw/displayfeature.default.so | vendor/lib64/libdlbdsservice.so | vendor/lib64/soundfx/libhwdap.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
+        odm/lib64/libmt@1.3.so)
+            "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+            ;;
         vendor/etc/sensors/hals.conf)
             sed -i '$a sensors.xiaomi.so' "${2}"
             ;;
