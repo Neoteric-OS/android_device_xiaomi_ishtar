@@ -374,7 +374,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     av \
     bt \
-    charging \
     display \
     gps \
     perf \
@@ -382,8 +381,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     usb \
     wfd \
     wlan
-
-TARGET_USE_AIDL_QTI_HEALTH := true
 
 # QTI service tracker
 PRODUCT_PACKAGES += \
