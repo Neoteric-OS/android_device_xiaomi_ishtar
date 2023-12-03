@@ -237,36 +237,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Graphics
 PRODUCT_VENDOR_PROPERTIES += \
-    debug.egl.hw=0 \
     debug.hwui.use_hint_manager=true \
-    debug.hwui.target_cpu_time_percent=30 \
-    debug.sf.hw=0 \
-    debug.sf.disable_client_composition_cache=1 \
-    debug.sf.enable_gl_backpressure=1 \
-    debug.sf.enable_hwc_vds=0 \
-    debug.sf.enable_advanced_sf_phase_offset=1 \
-    debug.sf.use_phase_offsets_as_durations=1 \
-    debug.sf.late.app.duration=13666666 \
-    debug.sf.early.app.duration=13666666 \
-    debug.sf.earlyGl.app.duration=13666666 \
-    debug.sf.early.sf.duration=10500000 \
-    debug.sf.earlyGl.sf.duration=10500000 \
-    debug.sf.late.sf.duration=10500000 \
-    persist.sys.sf.color_saturation=1.0 \
-    ro.surface_flinger.has_wide_color_display=true \
-    ro.surface_flinger.has_HDR_display=true \
-    ro.surface_flinger.use_color_management=true \
-    ro.surface_flinger.wcg_composition_dataspace=143261696 \
-    ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.use_content_detection_for_refresh_rate=true \
-    ro.surface_flinger.set_display_power_timer_ms=1000 \
-    ro.surface_flinger.set_touch_timer_ms=200 \
-    ro.surface_flinger.set_idle_timer_ms=80 \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
-    ro.surface_flinger.max_virtual_display_dimension=4096 \
-    ro.surface_flinger.supports_background_blur=1 \
-    vendor.gralloc.disable_ubwc=0
+    debug.hwui.target_cpu_time_percent=30
 
 # Incremental FS
 PRODUCT_VENDOR_PROPERTIES += \
