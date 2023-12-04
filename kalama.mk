@@ -242,6 +242,10 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     IPACM_Filter_cfg.xml
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # Kernel Binary
 KERNEL_PREBUILT_DIR := device/xiaomi/ishtar-kernel
 
