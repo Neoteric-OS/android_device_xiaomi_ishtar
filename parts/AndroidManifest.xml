@@ -65,6 +65,11 @@
             android:permission="PocketService">
         </service>
 
+        <service
+            android:name=".touch.TouchOrientationService"
+            android:exported="true">
+        </service>
+
     </application>
 </manifest>
 
