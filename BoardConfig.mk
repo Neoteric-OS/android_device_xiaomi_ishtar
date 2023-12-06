@@ -5,7 +5,6 @@
 #
 
 DEVICE_PATH := device/xiaomi/ishtar
-KERNEL_PREBUILT_DIR := device/xiaomi/ishtar-kernel
 
 # A/B
 AB_OTA_UPDATER := true
@@ -191,8 +190,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Vendor boot
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PREBUILT_DIR)/modules.load.recovery))
-
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
