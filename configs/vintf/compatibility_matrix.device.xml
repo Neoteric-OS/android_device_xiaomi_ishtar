@@ -2027,12 +2027,4 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <!-- Custom Touch HAL -->
-    <hal format="aidl" optional="true">
-        <name>vendor.aospa.xiaomitouch</name>
-        <interface>
-            <name>IXiaomiTouch</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
 </compatibility-matrix>

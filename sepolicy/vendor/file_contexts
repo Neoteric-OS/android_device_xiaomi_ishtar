@@ -96,6 +96,3 @@
 # Touchscreen
 /data/vendor/touch(/.*)?                                                                     u:object_r:vendor_data_touchreport_file:s0
 /sys/devices/virtual/touch/tp_dev/fod_status                                                 u:object_r:sysfs_tp_fodstatus:s0
-
-# XiaomiTouch
-/(vendor|system/vendor)/bin/hw/vendor\.aospa\.xiaomitouch-service                            u:object_r:hal_aospa_xiaomitouch_default_exec:s0
