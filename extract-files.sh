@@ -56,32 +56,20 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        product/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml)
+        product/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1*.xml)
             sed -i 's/xml version="2.0"/xml version="1.0"/g' "${2}"
             ;;
-        product/etc/permissions/vendor.qti.hardware.data.connection-V1*.xml)
-            sed -i 's/xml version="2.0"/xml version="1.0"/g' "${2}"
-            ;;
-        odm/etc/camera/enhance_motiontuning.xml)
-            sed -i 's/xml=version/xml version/g' "${2}"
-            ;;
-        odm/etc/camera/night_motiontuning.xml)
-            sed -i 's/xml=version/xml version/g' "${2}"
-            ;;
-        odm/etc/camera/motiontuning.xml)
+        odm/etc/camera/enhance_motiontuning.xml | odm/etc/camera/night_motiontuning.xml | odm/etc/camera/motiontuning.xml)
             sed -i 's/xml=version/xml version/g' "${2}"
             ;;
         odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc)
             sed -i 's/group system input/group system input\n    task_profiles ServiceCapacityLow/' "${2}"
             ;;
-        vendor/bin/hw/android.hardware.security.keymint-service-qti)
+        vendor/bin/hw/android.hardware.security.keymint-service-qti | vendor/lib64/libqtikeymint.so)
             "${PATCHELF}" --add-needed android.hardware.security.rkp-V3-ndk.so "${2}"
             ;;
         vendor/lib64/libdlbdsservice.so | vendor/lib64/soundfx/libhwdap.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
-            ;;
-         vendor/lib64/libqtikeymint.so)
-            "${PATCHELF}" --add-needed android.hardware.security.rkp-V3-ndk.so "${2}"
             ;;
         vendor/etc/sensors/hals.conf)
             sed -i '$a sensors.xiaomi.so' "${2}"
