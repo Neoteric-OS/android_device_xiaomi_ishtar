@@ -4,10 +4,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.miui.notch=1 \
     vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
 
-# Charger
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.charger.enable_suspend=1
-
 # FUSE
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
