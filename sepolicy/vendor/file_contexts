@@ -94,5 +94,4 @@
 /sys/devices/virtual/thermal/thermal_message/wifi_limit                                      u:object_r:sys_thermal_wifi_limit:s0
 
 # Touchscreen
-/data/vendor/touch(/.*)?                                                                     u:object_r:vendor_data_touchreport_file:s0
 /sys/devices/virtual/touch/tp_dev/fod_status                                                 u:object_r:sysfs_tp_fodstatus:s0
