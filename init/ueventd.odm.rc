@@ -70,3 +70,9 @@ subsystem mi_display
 
 # xiaomi display feature
 /dev/mi_display/*         0666   root       graphics
+
+# xiaomi ntag
+/dev/ntag5-nci            0660   nfc        nfc
+
+# xlog device
+/dev/xlog                 0660   system     audio

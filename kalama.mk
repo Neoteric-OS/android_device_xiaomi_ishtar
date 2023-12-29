@@ -229,12 +229,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.ishtar.rc \
-    init.qcom.rc \
-    init.recovery.qcom.rc \
     init.recovery.usb.rc \
     init.target.rc \
-    ueventd.odm.rc \
-    ueventd.qcom.rc
+    ueventd.odm.rc
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -377,6 +374,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     display \
     gps \
+    init \
     perf \
     telephony \
     usb \
