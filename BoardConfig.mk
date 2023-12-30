@@ -159,7 +159,6 @@ $(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-l
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Platform
-BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kalama
 
 # PowerShare
