@@ -55,7 +55,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
                 UserHandle.CURRENT);
 
         // Pocket
-        PocketService.startService(context);
+        context.startServiceAsUser(new Intent(context, PocketService.class),
+                UserHandle.CURRENT);
 
         // Override HDR types to enable Dolby Vision
         final DisplayManager displayManager = context.getSystemService(DisplayManager.class);
