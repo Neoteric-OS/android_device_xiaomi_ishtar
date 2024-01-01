@@ -1,5 +1,6 @@
 # Camera
 PRODUCT_SYSTEM_PROPERTIES += \
+    persist.vendor.camera.maxRAWSizes=19 \
     persist.vendor.camera.privapp.list=com.android.camera \
     ro.miui.notch=1 \
     vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
