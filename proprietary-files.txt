@@ -2704,6 +2704,7 @@ vendor/lib64/vendor.qti.sla.service@1.0-impl.so
 vendor/lib64/vendor.qti.sla.service@1.0.so
 
 # Soter
+mi_ext/product/app/QcomSoterService/QcomSoterService.apk:system_ext/app/QcomSoterService/QcomSoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/bin/SoterProvisioningTool
 vendor/bin/vendor.qti.hardware.soter@1.0-provision
