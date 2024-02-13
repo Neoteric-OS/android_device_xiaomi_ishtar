@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from ishtar HyperOS V816.0.23.11.19.DEV
+# All unpinned blobs below are extracted from ishtar HyperOS V816.0.6.0.UMACNXM
 
 # ACDBs
 odm/etc/acdbdata/Forte/Forte_acdb_cal.acdb
