@@ -39,3 +39,6 @@ vendor.sla.wwan.interface u:object_r:vendor_slad_prop:s0
 
 # Thermal
 vendor.sys.thermal.data.path u:object_r:vendor_thermal_normal_prop:s0
+
+# Camera
+persist.vendor.camera.manualApertureFnumber u:object_r:vendor_miui_vcamera_prop:s0

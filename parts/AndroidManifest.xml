@@ -72,6 +72,18 @@
             android:exported="true">
         </service>
 
+        <service
+            android:name=".camera.CameraApertureTileService"
+            android:icon="@drawable/ic_cam_tile"
+            android:label="@string/cam_aperture_toggle_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
     </application>
 </manifest>
 

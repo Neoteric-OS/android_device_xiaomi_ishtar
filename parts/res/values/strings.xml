@@ -17,4 +17,7 @@
 <resources>
     <!-- App Name -->
     <string name="app_name">Xiaomi Parts</string>
+
+    <!-- Cam Aperture -->
+    <string name="cam_aperture_toggle_title">Camera Aperture</string>
 </resources>

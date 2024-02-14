@@ -6,4 +6,5 @@ allow system_app sysfs_zram:dir { search };
 allow system_app hal_camera_aon_service:service_manager find;
 binder_call(system_app, hal_touchfeature_xiaomi_default)
 get_prop(system_app, qemu_hw_prop)
+set_prop(system_app, vendor_miui_vcamera_prop)
 allow system_app sysfs_zram:file { open read };
