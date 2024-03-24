@@ -35,9 +35,6 @@
 # Data files
 /data/vendor/multimedia(/.*)?                                                                 u:object_r:vendor_data_file:s0
 
-# Diag
-/data/vendor/modem(/.*)?                                                                      u:object_r:vendor_modem_data_file:s0
-
 # Fingerprint
 /data/vendor/goodix(/.*)?                                                                     u:object_r:vendor_fingerprint_data_file:s0
 /dev/goodix_fp                                                                                u:object_r:vendor_fingerprint_device:s0
