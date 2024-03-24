@@ -85,10 +85,10 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml \
 
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 
 DEVICE_MANIFEST_SKUS := kalama
-DEVICE_MANIFEST_KALAMA_FILES := $(DEVICE_PATH)/configs/vintf/manifest_kalama.xml
+DEVICE_MANIFEST_KALAMA_FILES += $(DEVICE_PATH)/configs/vintf/manifest_kalama.xml
 
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
