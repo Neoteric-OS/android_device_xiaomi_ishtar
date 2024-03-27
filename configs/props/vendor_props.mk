@@ -264,6 +264,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.dynamic_sar=1 \
     persist.vendor.radio.enable_temp_dds=true \
     persist.vendor.radio.enableadvancedscan=true \
+    persist.vendor.radio.redir_party_num=0 \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.radio.add_power_save=1 \
