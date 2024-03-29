@@ -268,7 +268,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.radio.add_power_save=1 \
-    persist.vendor.radio.dynamic_sar=1
+    persist.vendor.radio.dynamic_sar=1 \
+    ro.vendor.radio.build_profile=u-stable
 
 # USB
 PRODUCT_VENDOR_PROPERTIES += \
