@@ -68,11 +68,6 @@
         </service>
 
         <service
-            android:name=".touch.TouchOrientationService"
-            android:exported="true">
-        </service>
-
-        <service
             android:name=".camera.CameraApertureTileService"
             android:icon="@drawable/ic_cam_tile"
             android:label="@string/cam_aperture_toggle_title"
