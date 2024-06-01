@@ -14,4 +14,7 @@
 
     <!-- Height of the faceunlock image view -->
     <dimen name="keyguard_face_unlock_margin_bottom">24dp</dimen>
+
+    <!-- Udfps vendor code -->
+    <integer name="config_udfps_vendor_code">22</integer>
 </resources>
