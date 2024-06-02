@@ -14,6 +14,7 @@ allow bluetooth vendor_bt_data_file:file { getattr open read };
 allow bluetooth system_app_data_file:dir getattr;
 allow bluetooth system_app_data_file:file { getattr open read };
 allow bluetooth self:socket { create getopt read write };
+allow bluetooth vendor_bt_data_file:dir { search };
 #allow bluetooth self:socket ioctl;
 allow bluetooth servicemanager:fd *;
 allow bluetooth system_app:binder { call transfer };
