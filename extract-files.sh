@@ -93,6 +93,9 @@ function blob_fixup() {
         vendor/etc/sensors/hals.conf)
             sed -i '$a sensors.xiaomi.so' "${2}"
             ;;
+        vendor/lib64/c2.dolby.client.so)
+            "${PATCHELF}" --add-needed "libcodec2_hidl_shim.so" "${2}"
+            ;;
     esac
 }
 
