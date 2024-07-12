@@ -82,13 +82,5 @@
 /data/vendor/sla(/.*)?                                                                       u:object_r:sla_data_file:s0
 /dev/socket/slad                                                                             u:object_r:slad_socket:s0
 
-# Thermal
-/sys/class/thermal/thermal_message/torch_real_level                                          u:object_r:sys_thermal_torch_real_level:s0
-/sys/class/thermal/thermal_message/flash_state                                               u:object_r:sys_thermal_flash_state:s0
-/sys/class/thermal/thermal_message/wifi_limit                                                u:object_r:sys_thermal_wifi_limit:s0
-/sys/devices/virtual/thermal/thermal_message/torch_real_level                                u:object_r:sys_thermal_torch_real_level:s0
-/sys/devices/virtual/thermal/thermal_message/flash_state                                     u:object_r:sys_thermal_flash_state:s0
-/sys/devices/virtual/thermal/thermal_message/wifi_limit                                      u:object_r:sys_thermal_wifi_limit:s0
-
 # Touchscreen
 /sys/devices/virtual/touch/tp_dev/fod_status                                                 u:object_r:sysfs_tp_fodstatus:s0
