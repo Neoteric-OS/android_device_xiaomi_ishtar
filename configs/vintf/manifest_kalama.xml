@@ -478,6 +478,7 @@
         </interface>
         <fqname>@1.3::IQesdhal/default</fqname>
     </hal>
+    <!--
     <hal format="hidl">
         <name>vendor.qti.qspmhal</name>
         <transport>hwbinder</transport>
@@ -488,6 +489,7 @@
         </interface>
         <fqname>@1.0::IQspmhal/default</fqname>
     </hal>
+    -->
     <hal format="hidl">
         <name>vendor.qti.sla.service</name>
         <transport>hwbinder</transport>
