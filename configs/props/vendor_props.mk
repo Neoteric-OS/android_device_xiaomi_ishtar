@@ -157,6 +157,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
     bluetooth.device.class_of_device=90,2,12 \
+    bluetooth.device.default_name=Xiaomi 13 Ultra \
     bluetooth.hardware.power.idle_cur_ma=6 \
     bluetooth.hardware.power.operating_voltage_mv=3700 \
     bluetooth.hardware.power.rx_cur_ma=28 \
@@ -243,6 +244,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.keystore_desede=true
 
+# Marketname
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.product.marketname=Xiaomi 13 Ultra
+
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.c2inputsurface=-1 \
@@ -278,6 +283,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.usb.controller=a600000.dwc3 \
     vendor.usb.diag.func.name=ffs \
     vendor.usb.dpl.inst.name=dpl \
+    vendor.usb.product_string=Xiaomi 13 Ultra \
     vendor.usb.qdss.inst.name=qdss_sw \
     vendor.usb.rmnet.func.name=gsi \
     vendor.usb.rmnet.inst.name=rmnet \
