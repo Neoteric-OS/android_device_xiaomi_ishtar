@@ -35,3 +35,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # Sensor
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.sensors.enable.mag_filter=true
+
+# Silence minksocket logs
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.log.tag.minksocket=S
