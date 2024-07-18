@@ -23,7 +23,6 @@ import com.xiaomi.settings.edgesuppression.EdgeSuppressionService;
 import com.xiaomi.settings.touch.AlwaysOnFingerprintService;
 import com.xiaomi.settings.touch.TouchOrientationService;
 import com.xiaomi.settings.touch.TouchPollingRateService;
-import com.xiaomi.settings.doze.PocketService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -62,10 +61,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         context.startServiceAsUser(new Intent(context, TouchOrientationService.class),
                 UserHandle.CURRENT);
         context.startServiceAsUser(new Intent(context, TouchPollingRateService.class),
-                UserHandle.CURRENT);
-
-        // Pocket
-        context.startServiceAsUser(new Intent(context, PocketService.class),
                 UserHandle.CURRENT);
 
         // Override HDR types to enable Dolby Vision

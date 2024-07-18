@@ -80,11 +80,6 @@
         </service>
 
         <service
-            android:name=".doze.PocketService"
-            android:permission="PocketService">
-        </service>
-
-        <service
             android:name=".edgesuppression.EdgeSuppressionService"
             android:exported="true">
         </service>
