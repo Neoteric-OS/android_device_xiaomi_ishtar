@@ -51,6 +51,7 @@ odm/etc/audio/misound_res_headphone.bin
 odm/etc/audio/misound_res_spk.bin
 odm/etc/audio/misound_res_spk4ch.bin
 odm/etc/audio/misound_res_spk_power_game.bin
+odm/etc/audio/misound_res_spk_power_sva.bin
 odm/etc/audio/misound_res_spk_power_video.bin
 odm/lib/rfsa/adsp/libaisupernight_cdsp_skel.so
 odm/lib/rfsa/adsp/libaisupernight_ellc_cdsp_skel.so
@@ -187,6 +188,7 @@ vendor/lib/libagmclient.so
 vendor/lib/libagmmixer.so
 -vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib/vendor.qti.hardware.AGMIPC@1.0.so
+vendor/lib64/libagm.so
 vendor/lib64/libagm_compress_plugin.so
 vendor/lib64/libagm_mixer_plugin.so
 vendor/lib64/libagm_pcm_plugin.so
@@ -396,7 +398,6 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbluetooth_audio_session_aidl_qti.so
 vendor/lib64/libbluetooth_audio_session_qti.so
@@ -404,7 +405,6 @@ vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Camera (odm)
 odm/bin/hw/vendor.qti.camera.provider-service_64
@@ -2135,6 +2135,12 @@ vendor/lib64/com.fingerprints.extension@3.0.so
 vendor/lib64/vendor.xiaomi.hardware.dtool@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 
+# FM
+vendor/etc/init/init.qti.fm.rc
+vendor/etc/init.qti.fm.sh
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
+
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
@@ -2198,6 +2204,7 @@ vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/seccomp_policy/gnss@2.0-base.policy
 vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
+vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
@@ -2308,7 +2315,9 @@ vendor/etc/init/qconfig.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
 vendor/etc/media_kalama/video_system_specs.json
+vendor/etc/seccomp_policy/c2audio.vendor.base-arm.policy
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
+vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy
 vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
@@ -2319,6 +2328,7 @@ vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_c2_audio.xml
 vendor/etc/media_codecs_kalama.xml
 vendor/etc/media_codecs_kalama_vendor.xml
+vendor/etc/media_codecs_kalama_vendor_without_dvenc.xml
 vendor/etc/media_codecs_performance_kalama.xml
 vendor/etc/media_codecs_performance_kalama_vendor.xml
 vendor/etc/media_profiles.xml
@@ -2356,6 +2366,7 @@ vendor/lib64/libCOSNet_spatial_qnn_quantized.so
 vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libmm-omxcore.so
 vendor/lib64/libmmosal_vendor.so
+vendor/lib64/libplatformconfig.so
 vendor/lib64/libqc2audio_base.so
 vendor/lib64/libqc2audio_basecodec.so
 vendor/lib64/libqc2audio_core.so
@@ -2422,6 +2433,7 @@ vendor/lib64/hw/vendor.xiaomi.hardware.micharge@1.0-impl.so
 vendor/lib64/vendor.xiaomi.hardware.micharge@1.0.so
 
 # Mlipay
+mi_ext/product/app/IFAAService/IFAAService.apk:system_ext/app/IFAAService/IFAAService.apk
 odm/bin/fidoca
 odm/bin/mlipayd@1.1
 odm/bin/mtd@1.3
@@ -2451,7 +2463,6 @@ odm/lib64/vendor.xiaomi.hardware.mtdservice@1.3.so
 odm/lib64/vendor.xiaomi.hardware.tidaservice@1.0.so
 odm/lib64/vendor.xiaomi.hardware.tidaservice@1.1.so
 odm/lib64/vendor.xiaomi.hardware.tidaservice@1.2.so
-mi_ext/product/app/IFAAService/IFAAService.apk:system_ext/app/IFAAService/IFAAService.apk
 
 # MMI
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
@@ -2584,6 +2595,7 @@ vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
 # QCC
 vendor/bin/qcc-vendor
 vendor/etc/init/init.qccvendor.rc
+vendor/etc/init/init.qdmastats.rc
 vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
 vendor/lib64/libqcc_file_agent.so
 vendor/lib64/libqcc_sdk.so
@@ -2605,6 +2617,7 @@ vendor/bin/qesdk-manager
 vendor/etc/init/qesdk-manager.rc
 vendor/etc/seccomp_policy/qesdk.policy
 vendor/lib/libqesdk2_0.so
+vendor/lib/libqesdk_manager.so
 vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqesdk_manager.so
 vendor/lib64/libqti-qesdk-secure.so
@@ -2623,13 +2636,15 @@ vendor/etc/qguard.json
 # QMI
 system/etc/sysconfig/qti_whitelist.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
+vendor/bin/irsc_util
+vendor/bin/qcc-trd
 vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
-vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/qmipriod.rc
 vendor/etc/seccomp_policy/qti-systemd.policy
+vendor/etc/sec_config
 vendor/lib64/libidl.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libqcci_legacy.so
@@ -2721,6 +2736,7 @@ vendor/etc/qcril_database/upgrade/config/11.0_config.sql
 vendor/etc/qcril_database/upgrade/config/12.0_config.sql
 vendor/etc/qcril_database/upgrade/config/13.0_config.sql
 vendor/etc/qcril_database/upgrade/config/14.0_config.sql
+vendor/etc/qcril_database/upgrade/config/15.0_config.sql
 vendor/etc/qcril_database/upgrade/config/6.0_config.sql
 vendor/etc/qcril_database/upgrade/config/7.0_config.sql
 vendor/etc/qcril_database/upgrade/config/8.0_config.sql
@@ -2805,6 +2821,7 @@ vendor/lib64/libqdpr.so
 vendor/lib64/libqms_client.so
 vendor/lib64/libqms_xiaomi.so
 vendor/lib64/librcc.so
+vendor/lib64/libreference-ril.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-legacy.so
 vendor/lib64/libril-qc-ltedirectdisc.so
@@ -2907,6 +2924,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.1.so
 
 # QSEECOM
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
+vendor/bin/qseecom_sample_client
 vendor/bin/qseecomd
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
@@ -2919,6 +2937,7 @@ vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libbase64.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
+vendor/lib64/libdrmutils.so
 vendor/lib64/libgpt.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
@@ -2942,6 +2961,7 @@ vendor/lib64/libscveObjectTracker_stub.so
 # SMC Invoke
 vendor/etc/ssg/ta_config.json
 vendor/lib64/libminkdescriptor.so
+vendor/lib64/libnative-api.so
 vendor/lib64/libqcbor.so
 
 # Secure element
@@ -2963,6 +2983,7 @@ vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
+vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libSensorsInterface.so
 vendor/lib64/libnanopb.so
@@ -2991,6 +3012,7 @@ vendor/etc/sensors/sns_reg_config
 
 # Sensors-config (odm)
 odm/etc/sensors/config/ak991x_dri_0.json
+odm/etc/sensors/config/chre_dynamic_sensors.json
 odm/etc/sensors/config/kailua_qsh_ble_0.json
 odm/etc/sensors/config/lightSensorConfig.json
 odm/etc/sensors/config/qsh_ble.json
@@ -3068,6 +3090,7 @@ vendor/lib64/vendor.xiaomi.sensor.communicate@1.0.so
 odm/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
 odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc
 odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@2.0-service.xml
+odm/etc/cit_param_config.json
 odm/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so
 
 # Sensors CIT (vendor)
