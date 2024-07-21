@@ -278,15 +278,5 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # USB
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.usb.config=mtp,adb \
     ro.usb.uvc.enabled=true \
-    sys.usb.mtp.batchcancel=1 \
-    vendor.usb.controller=a600000.dwc3 \
-    vendor.usb.diag.func.name=ffs \
-    vendor.usb.dpl.inst.name=dpl \
-    vendor.usb.product_string=Xiaomi 13 Ultra \
-    vendor.usb.qdss.inst.name=qdss_sw \
-    vendor.usb.rmnet.func.name=gsi \
-    vendor.usb.rmnet.inst.name=rmnet \
-    vendor.usb.rndis.func.name=gsi \
-    vendor.usb.use_ffs_mtp=1
+    vendor.usb.product_string=Xiaomi 13 Ultra
