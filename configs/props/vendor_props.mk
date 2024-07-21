@@ -279,6 +279,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # USB
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.usb.config=mtp,adb \
+    ro.usb.uvc.enabled=true \
     sys.usb.mtp.batchcancel=1 \
     vendor.usb.controller=a600000.dwc3 \
     vendor.usb.diag.func.name=ffs \

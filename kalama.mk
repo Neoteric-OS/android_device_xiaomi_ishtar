@@ -326,6 +326,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon_Sys  \
     CarrierConfigResTarget_vendor \
     FrameworksResCommon \
+    IshtarDeviceAsWebcamRes \
     SettingsResCommon \
     SystemUIResCommon \
     TelecommResCommon_Sys \
