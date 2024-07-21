@@ -3223,10 +3223,6 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 # Trustzone
 vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk
 
-# USB
-vendor/bin/init.qcom.usb.sh
-vendor/etc/init/hw/init.qcom.usb.rc
-
 # Vibrator
 odm/firmware/0_click_P_RTP.bin:vendor/firmware/0_click_P_RTP.bin
 odm/firmware/1_doubelClick_P_RTP.bin:vendor/firmware/1_doubelClick_P_RTP.bin
