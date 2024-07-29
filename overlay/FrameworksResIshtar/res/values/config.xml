@@ -445,8 +445,16 @@
          @see https://www.w3.org/TR/SVG/paths.html#PathData
     -->
     <string name="config_mainBuiltInDisplayCutout">
-        M 0,0 H -34 V 104 H 34 V 0 H 0 Z
+        M -42,68 M 42,68 A 42,42 0 1,0 -42,68 A 42,42 0 1,0 42,68 Z
     </string>
+
+    <!--Like config_mainBuiltInDisplayCutout, but this path is used to report the
+        one single bounding rect per device edge to the app via
+        {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
+        appearance of the cutout as much as possible, and may be smaller than
+        config_mainBuiltInDisplayCutout
+        -->
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation">M 0,0 H -42 V 122 H 42 V 0 H 0 Z</string>
 
     <!-- The default refresh rate for a given device. Change this value to set a higher default
          refresh rate. If the hardware composer on the device supports display modes with a higher
