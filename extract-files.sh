@@ -84,6 +84,9 @@ function blob_fixup() {
         vendor/etc/gps.conf)
             sed -i 's/com\.lbe\.security\.miui/com\.google\.android\.carrierlocation/g' "${2}"
             ;;
+        vendor/etc/seccomp_policy/qwesd@2.0.policy)
+            echo "pipe2: 1" >> "${2}"
+            ;;
         vendor/etc/sensors/hals.conf)
             sed -i '$a sensors.xiaomi.so' "${2}"
             ;;
