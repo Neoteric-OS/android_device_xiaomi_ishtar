@@ -3,6 +3,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.camera.maxRAWSizes=19 \
     persist.vendor.camera.privapp.list=com.android.camera \
     ro.hardware.camera=xiaomi \
+    ro.miui.build.region=global \
     ro.miui.notch=1 \
     ro.product.mod_device=ishtar_global \
     vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
