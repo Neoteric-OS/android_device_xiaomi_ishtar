@@ -219,6 +219,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Fingerprint
 PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.fingerprint.type=udfps_optical \
+    persist.vendor.fingerprint.sensor_location=720|2541|123 \
+    persist.vendor.fingerprint.sensor_modules=goodix_fod \
     persist.vendor.sys.fp.expolevel=0x88 \
     persist.vendor.sys.fp.fod.location.X_Y=720,2541 \
     persist.vendor.sys.fp.fod.size.width_height=246,246 \
