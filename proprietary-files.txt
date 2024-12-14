@@ -925,7 +925,7 @@ odm/etc/init/vendor.qti.camera.provider-service_64.rc
 odm/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
 odm/etc/vintf/manifest/vendor.qti.camera.provider.xml
 odm/etc/vintf/manifest/vendor.xiaomi.camera.aon-impl.xml
-odm/lib/camera/aon_front.pb
+odm/lib/camera/aon_front.pb;SYMLINK=vendor/lib/camera/aon_front.pb
 odm/lib/camera/com.qti.sensormodule.ishtar_semco_imx858_tele3x.bin
 odm/lib/camera/com.qti.sensormodule.ishtar_semco_imx858_tele5x.bin
 odm/lib/camera/com.qti.sensormodule.ishtar_semco_imx858_ultra.bin
@@ -1066,7 +1066,7 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.portraitrepair.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.sr.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.supermoon.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.tsskinbeautifier.so
-odm/lib64/camera/aon_front.pb
+odm/lib64/camera/aon_front.pb;SYMLINK=vendor/lib64/camera/aon_front.pb
 odm/lib64/camera/com.qti.actuator.ishtar_semco_imx858_ak7314_tele3x_actuator.so
 odm/lib64/camera/com.qti.actuator.ishtar_semco_imx858_ak7316_ultra_actuator.so
 odm/lib64/camera/com.qti.actuator.ishtar_semco_imx858_sem1217s_tele5x_actuator.so
