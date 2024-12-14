@@ -417,10 +417,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_kalama/android.hardware.sensor.stepdetector.xml
 
 # Shipping API level
-BOARD_API_LEVEL := 33
-BOARD_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
-PRODUCT_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
-PRODUCT_TARGET_VNDK_VERSION := $(BOARD_API_LEVEL)
+BOARD_SHIPPING_API_LEVEL := 33
+PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
+PRODUCT_TARGET_VNDK_VERSION := $(BOARD_SHIPPING_API_LEVEL)
 
 # Tetheroffload
 PRODUCT_PACKAGES += \
