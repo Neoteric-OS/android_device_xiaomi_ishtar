@@ -31,12 +31,4 @@ $(DSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT)
 
-CAMERA_LIB_SYMLINKS := $(TARGET_OUT_VENDOR)/lib64/camera
-$(CAMERA_LIB_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating camera lib64 symlink: $@"
-	@mkdir -p $@
-	$(hide) ln -sf /odm/lib64/camera/aon_front.pb $@/aon_front.pb
-
-ALL_DEFAULT_INSTALLED_MODULES += \
-        $(CAMERA_LIB_SYMLINKS)
 endif
