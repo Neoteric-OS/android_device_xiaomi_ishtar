@@ -1,10 +1,11 @@
 //
 // Copyright (C) 2023 Paranoid Android
+// Copyright (C) 2024 Neoteric-OS
 //
 // SPDX-License-Identifier: Apache-2.0
 //
 
 runtime_resource_overlay {
-    name: "PASystemUIIshtar",
-    device_specific: true,
+    name: "NeotericFrameworksIshtar",
+    product_specific: true,
 }
