@@ -347,9 +347,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksResIshtar \
     MiuiCameraOverlay \
-    PAFrameworksIshtar \
-    PASettingsIshtar \
-    PASystemUIIshtar \
+    NeotericFrameworksIshtar \
     SettingsResIshtar \
     SystemUIResIshtar
 
@@ -370,7 +368,7 @@ PRODUCT_COPY_FILES += \
 
 # PowerShare
 PRODUCT_PACKAGES += \
-    vendor.aospa.powershare-service
+    vendor.lineage.powershare-service
 
 # Properties
 include $(DEVICE_PATH)/configs/props/odm_props.mk
