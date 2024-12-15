@@ -473,6 +473,9 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_HAS_GADGET_HAL := true
 
+PRODUCT_PACKAGES += \
+    libusbhost.vendor
+
 # Vibrator
 $(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
 
