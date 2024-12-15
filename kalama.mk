@@ -249,9 +249,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
-# Kernel Binary
-KERNEL_PREBUILT_DIR := device/xiaomi/ishtar-kernel
-
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
