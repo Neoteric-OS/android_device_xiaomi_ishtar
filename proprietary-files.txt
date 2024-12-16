@@ -954,6 +954,7 @@ odm/lib/libcamxcommonutils.so
 odm/lib/libcamxsettingsmanager.so
 odm/lib/libmialgo_ai_vision.so
 odm/lib/libqshcamera.so
+odm/lib64/camera/aon_front.pb;SYMLINK=vendor/lib64/camera/aon_front.pb
 odm/lib64/camera/components/com.bots.node.vendortagwrite.so
 odm/lib64/camera/components/com.mi.node.aiasd.so
 odm/lib64/camera/components/com.mi.node.dlengine.so
@@ -1066,7 +1067,6 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.portraitrepair.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.sr.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.supermoon.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.tsskinbeautifier.so
-odm/lib64/camera/aon_front.pb;SYMLINK=vendor/lib64/camera/aon_front.pb
 odm/lib64/camera/com.qti.actuator.ishtar_semco_imx858_ak7314_tele3x_actuator.so
 odm/lib64/camera/com.qti.actuator.ishtar_semco_imx858_ak7316_ultra_actuator.so
 odm/lib64/camera/com.qti.actuator.ishtar_semco_imx858_sem1217s_tele5x_actuator.so
@@ -1618,6 +1618,7 @@ vendor/lib64/libhdrvivid.so
 # Display (HWC)
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/bin/qdcmss
+vendor/bin/ubwcconvert
 vendor/etc/init/qdcmss.rc
 vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libdisplayconfig.qti.so
@@ -1637,6 +1638,7 @@ vendor/lib64/libsdmdal.so
 vendor/lib64/libsdmutils.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Display (SDM)
 vendor/etc/display/3dlut-pt-onnx-ptq-htp-fp16.dlc
@@ -1661,8 +1663,10 @@ vendor/lib64/libdigital-dimming.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libfeutils.so
+vendor/lib64/libgralloc.qti.so
 vendor/lib64/libintervmipc.so
 vendor/lib64/libmm-hdcpmgr.so
+vendor/lib64/libqdMetaData.so
 vendor/lib64/libqrtrclient.so
 vendor/lib64/libqseed3.so
 vendor/lib64/librcmask.so
@@ -1674,7 +1678,6 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libvmfilexfer.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Displayfeature (odm)
 odm/etc/disp0/mdss_dsi_m1_42_02_0a_dsc_cmd/clstc/ClstcLut0.txt
@@ -1708,6 +1711,7 @@ odm/etc/disp0/mdss_dsi_m1_42_02_0a_dsc_cmd/mi_gc_0.txt
 odm/etc/disp0/mdss_dsi_m1_42_02_0a_dsc_cmd/mi_gc_1.txt
 odm/etc/disp0/mdss_dsi_m1_42_02_0a_dsc_cmd/mi_gc_2.txt
 odm/etc/disp0/mdss_dsi_m1_42_02_0a_dsc_cmd/mi_gc_3.txt
+odm/etc/init/init.boled.lightsensor.rc
 odm/etc/df_default.xml
 odm/lib/hw/displayfeature.default.so
 odm/lib/libMiDispDevManager.so
@@ -1897,12 +1901,12 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # Graphics
-vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
-vendor/lib/egl/libVkLayer_ADRENO_qprofiler.so
 vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libVkLayer_ADRENO_qprofiler.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib/libCB.so
