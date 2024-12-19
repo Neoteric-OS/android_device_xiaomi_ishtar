@@ -1538,7 +1538,6 @@ vendor/etc/seccomp_policy/qwesd@2.0.policy
 odm/lib64/hw/consumerir.qcom.so
 vendor/bin/hw/android.hardware.ir-service.example
 vendor/etc/init/android.hardware.ir-service.example.rc
-vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml
 
 # Data
 vendor/bin/ATFWD-daemon
