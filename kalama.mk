@@ -88,6 +88,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     audioadsprpcd \
+    libaudioroute.vendor \
     libbatterylistener \
     libqcompostprocbundle \
     libqcomvisualizer \
