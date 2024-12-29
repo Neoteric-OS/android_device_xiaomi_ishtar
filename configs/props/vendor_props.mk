@@ -285,6 +285,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.enable_hwc_vds=0 \
     debug.sf.enable_advanced_sf_phase_offset=1 \
+    debug.sf.frame_rate_multiple_threshold=120 \
     debug.sf.use_phase_offsets_as_durations=1 \
     debug.sf.late.app.duration=13666666 \
     debug.sf.early.app.duration=13666666 \
