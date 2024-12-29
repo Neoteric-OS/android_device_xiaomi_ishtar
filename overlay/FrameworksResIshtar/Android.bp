@@ -5,5 +5,5 @@
 
 runtime_resource_overlay {
     name: "FrameworksResIshtar",
-    product_specific: true,
+    device_specific: true,
 }
