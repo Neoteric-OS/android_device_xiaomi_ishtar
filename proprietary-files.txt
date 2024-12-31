@@ -177,18 +177,10 @@ vendor/bin/agmhostless
 vendor/bin/agmplay
 vendor/bin/agmvoiceui
 vendor/bin/cplay
-vendor/lib/libagm_compress_plugin.so
-vendor/lib/libagm_mixer_plugin.so
-vendor/lib/libagm_pcm_plugin.so
-vendor/lib/libagmclient.so
 vendor/lib/libagmmixer.so
 -vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib/vendor.qti.hardware.AGMIPC@1.0.so
 vendor/lib64/libagm.so
-vendor/lib64/libagm_compress_plugin.so
-vendor/lib64/libagm_mixer_plugin.so
-vendor/lib64/libagm_pcm_plugin.so
-vendor/lib64/libagmclient.so
 vendor/lib64/libagmmixer.so
 -vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
@@ -217,7 +209,6 @@ vendor/lib/libar-gpr.so
 -vendor/lib/libar-pal.so
 -vendor/lib/libats.so
 vendor/lib/libaudio_log_utils.so
-vendor/lib/libaudiochargerlistener.so
 vendor/lib/libaudiocloudctrl.so
 vendor/lib/libbatterylistener.so
 vendor/lib/libcapiv2svacnnvendor.so
@@ -240,7 +231,6 @@ vendor/lib/libsndcardparser.so
 vendor/lib/libspatializerparamstorage.so
 vendor/lib/libxlog.so
 -vendor/lib/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib/vendor.qti.hardware.pal@1.0.so
 vendor/lib64/hw/audio.primary.kalama.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
@@ -255,7 +245,6 @@ vendor/lib64/libar-gpr.so
 -vendor/lib64/libar-pal.so
 -vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libaudiochargerlistener.so
 vendor/lib64/libaudiocloudctrl.so
 vendor/lib64/libbatterylistener.so
 vendor/lib64/libcapiv2svacnnvendor.so
@@ -287,7 +276,6 @@ vendor/lib64/libstfactory-vendor.so
 vendor/lib64/libstreamparser.so
 vendor/lib64/libxlog.so
 -vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.pal@1.0.so
 
 # Audio (configs)
 odm/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
