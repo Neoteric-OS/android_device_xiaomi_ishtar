@@ -1,8 +1,11 @@
 # Battery
-genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_qcom_battery:s0
 
 # Extcon
 genfscon sysfs /devices/platform/soc/soc:spf_core_platform/soc:spf_core_platform:lpass-cdc/wcd938x-codec/extcon u:object_r:sysfs_extcon:s0
+
+# Powershare
+genfscon sysfs /class/qcom-battery/reverse_chg_mode u:object_r:sysfs_powershare:s0
 
 # Suspend
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/880000.spi/spi_master/spi0/spi0.0/wakeup/wakeup26 u:object_r:sysfs_wakeup:s0
