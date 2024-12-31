@@ -88,8 +88,15 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     audioadsprpcd \
+    libagm_compress_plugin \
+    libagm_mixer_plugin \
+    libagm_pcm_plugin \
+    libagmclient \
+    libaudiochargerlistener \
     libaudioroute.vendor \
     libbatterylistener \
+    libfmpal \
+    libhfp_pal \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -97,7 +104,8 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libvolumelistener \
     sound_trigger.primary.kalama \
-    vendor.qti.hardware.AGMIPC@1.0-service
+    vendor.qti.hardware.AGMIPC@1.0-service \
+    vendor.qti.hardware.pal@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
