@@ -317,10 +317,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.keystore_desede=true
 
-# Marketname
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.product.marketname=Xiaomi 13 Ultra
-
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.c2inputsurface=-1 \
