@@ -46,10 +46,32 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/foreground/cpus 0-6
 
     # Configure uclamp
-    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
-    write /dev/cpuctl/background/cpu.uclamp.max 50
-    write /dev/cpuctl/system-background/cpu.uclamp.max 50
-    write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
+    setprop kernel.sched_util_clamp_min_rt_default 500
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 500
+    #top-app
+    write /dev/cpuctl/top-app/cpu.uclamp.max max
+    write /dev/cpuctl/top-app/cpu.uclamp.min 10
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 0
+    #foreground
+    write /dev/cpuctl/foreground/cpu.uclamp.max 80
+    write /dev/cpuctl/foreground/cpu.uclamp.min 20
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
+    #background
+    write /dev/cpuctl/background/cpu.uclamp.max max
+    write /dev/cpuctl/background/cpu.uclamp.min 20
+    write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
+    #system-background
+    write /dev/cpuctl/system-background/cpu.uclamp.max 40
+    write /dev/cpuctl/system-background/cpu.uclamp.min 0
+    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 0
+    #nnapi-hal
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.max max
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.min 75
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.latency_sensitive 1
+    #camera-daemon
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.max max
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.min 50
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 1
     # Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 5% dex2oat ~2.5%)
     write /dev/cpuctl/background/cpu.shares 1024
     write /dev/cpuctl/system-background/cpu.shares 1024
