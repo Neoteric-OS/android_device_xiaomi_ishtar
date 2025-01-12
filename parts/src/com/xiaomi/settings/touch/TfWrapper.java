@@ -25,12 +25,15 @@ public class TfWrapper {
 
     public static ITouchFeature getTouchFeature() {
         if (mTouchFeature == null) {
-            Log.d(TAG, "getTouchFeature: mTouchFeature=null");
             try {
-                mTouchFeature = ITouchFeature.getService();
-                mTouchFeature.asBinder().linkToDeath(mDeathRecipient, 0);
+                ITouchFeature touchFeature = ITouchFeature.getService();
+                if (touchFeature != null) {
+                    touchFeature.asBinder().linkToDeath(mDeathRecipient, 0);
+                    // Assign after successful linking
+                    mTouchFeature = touchFeature;
+                }
             } catch (Exception e) {
-                Log.e(TAG, "getTouchFeature failed!", e);
+                mTouchFeature = null;
             }
         }
         return mTouchFeature;
