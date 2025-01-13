@@ -142,6 +142,7 @@ odm/mount/camera/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so
 odm/mount/camera/lib/rfsa/adsp/libmialgo_slow_motion_cdsp_skel.so
 vendor/lib/rfsa/adsp/capi_cirrus_sp.so
 vendor/lib/rfsa/adsp/chre_qsh_shim.so
+vendor/lib/rfsa/adsp/hrtf5c.bin
 vendor/lib/rfsa/adsp/libDspIOProxy_skel.so
 vendor/lib/rfsa/adsp/libQ6MSFR_manager_skel.so
 vendor/lib/rfsa/adsp/libVppAisQnnHtp.so
@@ -366,6 +367,7 @@ odm/etc/camera/facefocus_models/facedet_front.dlc
 odm/etc/camera/facefocus_models/facedet_full.dlc
 odm/etc/camera/facefocus_models/facedet_part.dlc
 odm/etc/camera/facefocus_models/facevalid.dlc
+odm/etc/camera/immune-system/hook_case.json
 odm/etc/camera/mihal_overlap/overlap_config.json
 odm/etc/camera/mihal_overlap/proj_overlap_config.json
 odm/etc/camera/resources/kernel/64/g33beb55034049b5d9833135ad1e0e3d2.bin
@@ -881,7 +883,8 @@ odm/etc/camera/resources/render/Effect/70_FacialRefine/mode_rear.json
 odm/etc/camera/resources/render/Effect/70_FacialRefine/mode_rear_portrait.json
 odm/etc/camera/resources/render/Effect/70_FacialRefine/mode_video.json
 odm/etc/camera/resources/render/Effect/Parameter/mode_rear.json
-odm/etc/camera/resources/render/Effect/Parameter/mode_rear_style.json
+odm/etc/camera/resources/render/Effect/Parameter/mode_rear_classical_style.json
+odm/etc/camera/resources/render/Effect/Parameter/mode_rear_vivid_style.json
 odm/etc/camera/resources/render/Effect/effect_list.json
 odm/etc/camera/resources/render/Effect/effect_mode_IQ.json
 odm/etc/camera/resources/render/Effect/effect_mode_classical.json
@@ -992,7 +995,6 @@ odm/etc/camera/aivsModel_EE21E6F4
 odm/etc/camera/aivsModel_FF7AE9B5
 odm/etc/camera/antibanding_params.json
 odm/etc/camera/arcsoft_dynamicEV_config.ini
-odm/etc/camera/arcsoft_rawhdr_dynamicEV_config.ini
 odm/etc/camera/beauty_config_cn.json
 odm/etc/camera/beauty_config_cn_8g.json
 odm/etc/camera/beauty_config_gl.json
@@ -1029,7 +1031,7 @@ odm/etc/camera/ellc_params.json
 odm/etc/camera/ellv.bin
 odm/etc/camera/ellv_params.xml
 odm/etc/camera/enhance_motiontuning.xml
-odm/etc/camera/facesr_hd_composite_ff_hd_6.0.7_qcom8550_qnn_segqnn_hdRGB20240320QuantQnn2.3.5.model
+odm/etc/camera/facesr_hd_composite_ff_hd_6.0.5_qcom8550_qnn_segqnn_hd0118re7RGBQnn2.3.5.model
 odm/etc/camera/hdrcheckerextendparamsettings.yml
 odm/etc/camera/hdrcheckerparamsettings.yml
 odm/etc/camera/his_gme_tele.yaml
@@ -1480,6 +1482,7 @@ odm/lib64/libremosaic_wrapper.so
 odm/lib64/libremosaiclib.so
 odm/lib64/librfs_warp.so
 odm/lib64/libsfeShiftExtrapolation.so
+odm/lib64/libshadowhook.so
 odm/lib64/libsupermoon.so
 odm/lib64/libswregistrationalgo.so
 odm/lib64/libtfestriping.so
@@ -1787,6 +1790,7 @@ odm/etc/display/qdcm_calib_data_xiaomi_42_02_0a_cmd_mode_dsc_dsi_panel.json
 odm/etc/mdss_dsi_m1_42_02_0a_dsc_cmd_mi.xml
 
 # Display (Config)
+product/etc/displayconfig/common_multi_factor_thermal_brightness_control.xml:vendor/etc/displayconfig/common_multi_factor_thermal_brightness_control.xml
 product/etc/displayconfig/display_id_4630946545580055171.xml:vendor/etc/displayconfig/display_id_4630946545580055171.xml
 product/etc/displayconfig/display_id_4630947134992368259.xml:vendor/etc/displayconfig/display_id_4630947134992368259.xml
 product/etc/displayconfig/thermal_brightness_control.xml:vendor/etc/displayconfig/thermal_brightness_control.xml
@@ -1925,6 +1929,7 @@ odm/lib/libtruetone.so
 odm/lib/libvideomode.so
 odm/lib64/hw/displayfeature.default.so
 odm/lib64/libMiDispDevManager.so
+odm/lib64/libadaptivehdr.so
 odm/lib64/libcolortempmode.so
 odm/lib64/libdisplaycount.so
 odm/lib64/libdisplaylog.so
@@ -2070,11 +2075,8 @@ vendor/lib64/libfastcvdsp_stub.so
 odm/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so
 odm/lib64/libgf_hal.so
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
-vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service
-vendor/etc/init/vendor.xiaomi.hardware.dtool@1.0-service.rc
 vendor/etc/vintf/manifest/fod.xml
 vendor/lib64/com.fingerprints.extension@3.0.so
-vendor/lib64/vendor.xiaomi.hardware.dtool@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 
 # FM
@@ -2131,8 +2133,14 @@ vendor/gpu/kbc/unified_kbcs_64.bin
 vendor/gpu/kbc/unified_ksqs.bin
 
 # GNSS
+odm/bin/hw/android.hardware.gnss-aidl-service-qti
+odm/etc/init/android.hardware.gnss-aidl-service-qti.rc
+odm/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
+odm/etc/vintf/manifest/vendor.qti.gnss-service.xml
 odm/etc/izat_device.conf
-vendor/bin/hw/android.hardware.gnss-aidl-service-qti
+odm/lib64/vendor.qti.gnss-V3-ndk.so
+odm/lib64/vendor.qti.gnss-V4-ndk.so
+odm/lib64/vendor.qti.gnss-service.so
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/garden_app
@@ -2142,15 +2150,12 @@ vendor/bin/mlid
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
-vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/seccomp_policy/gnss@2.0-base.policy
 vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
-vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
-vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
 vendor/etc/apdr.conf
 vendor/etc/batching.conf
 vendor/etc/gps.conf
@@ -2200,8 +2205,6 @@ vendor/lib64/libslimclient.so
 vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libsys_info_cache.so
 vendor/lib64/libxtadapter.so
-vendor/lib64/vendor.qti.gnss-V4-ndk.so
-vendor/lib64/vendor.qti.gnss-service.so
 
 # Identity service
 vendor/bin/hw/android.hardware.identity-service-qti
@@ -2408,14 +2411,16 @@ odm/etc/libnfc-nci.conf
 odm/lib64/nfc_nci.nqx.default.hw.so:vendor/lib64/nfc_nci.nqx.default.hw.so
 
 # NFC (vendor)
+odm/bin/hw/android.hardware.nfc@1.2-service-st:vendor/bin/hw/android.hardware.nfc@1.2-service-st
+odm/etc/init/android.hardware.nfc@1.2-service-st.rc:vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 odm/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
-vendor/bin/hw/android.hardware.nfc@1.2-service-st
+odm/lib64/libstnfc-auth.so:vendor/lib64/libstnfc-auth.so
+odm/lib64/nfc_nci.st21nfc.st.so:vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/bin/nqnfcinfo
 vendor/bin/pnscr
 vendor/bin/pnscr-mi
 vendor/bin/pnscr-rf
 vendor/bin/qsap_voiceui
-vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 vendor/etc/libnfc-SN220_19_2MHZ.conf
 vendor/etc/libnfc-SN220_38_4MHZ.conf
 vendor/etc/libnfc-hal-st-519_mtp.conf
@@ -2451,10 +2456,8 @@ vendor/firmware/st54j_fw.bin
 vendor/firmware/st54k_conf_38.4MHz.bin
 vendor/lib64/libsn100u_fw.so
 vendor/lib64/libsn220u_fw.so
-vendor/lib64/libstnfc-auth.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
-vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/lib64/se_nq_extn_client.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
@@ -2568,7 +2571,6 @@ vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 
 # QVR
-vendor/bin/hw/qvrservice
 vendor/bin/qvrcameratest
 vendor/bin/qvrdatacapture
 vendor/bin/qvrdatalogger
@@ -2591,10 +2593,8 @@ vendor/lib64/libhalide_hexagon_host.so
 vendor/lib64/libqvr_cam_cdsp_driver_stub.so
 vendor/lib64/libqvr_cdsp_driver_stub.so
 vendor/lib64/libqvr_eyetracking_plugin.so
-vendor/lib64/libqvr_hostcontroller_plugin.so
 vendor/lib64/libqvrcamera_client.qti.so
 vendor/lib64/libqvrcameraplayback.so
-vendor/lib64/libqvrservice.so
 vendor/lib64/libqvrservice_client.qti.so
 vendor/lib64/libqvrservice_ov7251_hvx_tuning.so
 vendor/lib64/libqvrservice_ov9282_hvx_tuning.so
@@ -2992,7 +2992,7 @@ vendor/lib64/vendor.qti.sla.service@1.0-impl.so
 vendor/lib64/vendor.qti.sla.service@1.0.so
 
 # Soter
-product/app/QcomSoterService/QcomSoterService.apk:system_ext/app/QcomSoterService/QcomSoterService.apk
+product/app/SoterService/SoterService.apk:system_ext/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/bin/SoterProvisioningTool
 vendor/bin/vendor.qti.hardware.soter@1.0-provision
