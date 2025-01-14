@@ -198,6 +198,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.config \
     vendor.qti.hardware.display.config-V2-ndk.vendor \
+    vendor.qti.hardware.display.config-V5-ndk.vendor \
     vendor.qti.hardware.display.config-V6-ndk.vendor \
     vendor.qti.hardware.display.demura-service \
     vendor.qti.hardware.display.mapper@1.0.vendor \
