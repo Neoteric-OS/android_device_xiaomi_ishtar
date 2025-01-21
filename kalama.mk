@@ -272,6 +272,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.ishtar.rc \
+    init.mi_udfps.rc \
     init.recovery.usb.rc \
     init.target.rc \
     ueventd.odm.rc
