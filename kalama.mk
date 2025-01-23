@@ -427,6 +427,9 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wfd \
     wlan
 
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+TARGET_USE_AIDL_QTI_BT_AUDIO := true
+
 # QTI service tracker
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
