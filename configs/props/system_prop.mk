@@ -16,13 +16,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     media.aac_51_output_enabled=true \
     media.settings.xml=/vendor/etc/media_profiles_kalama.xml \
-    media.stagefright.enable-aac=true \
-    media.stagefright.enable-fma2dp=true \
-    media.stagefright.enable-http=true \
-    media.stagefright.enable-player=true \
-    media.stagefright.enable-qcp=true \
-    media.stagefright.enable-scan=true \
-    persist.mm.enable.prefetch=true \
     ro.media.recorder-max-base-layer-fps=60
 
 # NFC
