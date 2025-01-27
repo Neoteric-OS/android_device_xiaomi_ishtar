@@ -249,13 +249,22 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss-V1-ndk_platform.vendor
+    android.hardware.gnss-V1-ndk_platform.vendor \
+    android.hardware.gnss-V2-ndk.vendor \
+    android.hardware.health-V1-ndk.vendor
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery \
     charger_res_images_vendor
+
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0.vendor \
+     android.hardware.health@2.1.vendor
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -419,7 +428,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     av \
     bt \
-    gps \
     init \
     perf \
     telephony \
