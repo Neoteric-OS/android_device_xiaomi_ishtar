@@ -107,7 +107,7 @@ BOARD_BOOTCONFIG := \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3
 
-BOARD_BOOTCONFIG += androidboot.selinux=permissive
+#BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_KERNEL_IMAGE_NAME := Image
