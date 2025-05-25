@@ -242,8 +242,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.whitepoint_calibration_enable=false \
     ro.vendor.xiaomi.bl.poll=true \
     sys.displayfeature.entry.enable=true \
-    sys.displayfeature_hidl=true \
-    ro.vendor.displayfeature.dump=true
+    sys.displayfeature_hidl=true
 
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
