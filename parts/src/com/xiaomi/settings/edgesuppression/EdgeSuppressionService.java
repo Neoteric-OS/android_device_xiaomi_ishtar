@@ -25,20 +25,12 @@ public class EdgeSuppressionService extends Service {
 
     @Override
     public void onCreate() {
-        if ((Build.SKU.equals("nuwa") || Build.SKU.equals("ishtar"))) {
-            if (DEBUG) Log.d(TAG, "Creating service");
-            super.onCreate();
-            mEdgeSuppressionManager = EdgeSuppressionManager.getInstance(getApplicationContext());
-            getPackageManager().setComponentEnabledSetting(
-                    new ComponentName(this, "com.xiaomi.settings.edgesuppression.EdgeSuppressionSettingsActivity"),
-                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
-        } else {
-            if (DEBUG) Log.d(TAG, "Stopping service, not supported on this device");
-            getPackageManager().setComponentEnabledSetting(
-                    new ComponentName(this, "com.xiaomi.settings.edgesuppression.EdgeSuppressionSettingsActivity"),
-                    PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-            stopSelf();
-        }
+        if (DEBUG) Log.d(TAG, "Creating service");
+        super.onCreate();
+        mEdgeSuppressionManager = EdgeSuppressionManager.getInstance(getApplicationContext());
+        getPackageManager().setComponentEnabledSetting(
+                new ComponentName(this, "com.xiaomi.settings.edgesuppression.EdgeSuppressionSettingsActivity"),
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
     }
 
     @Override
