@@ -168,7 +168,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     bluetooth.profile.bas.client.enabled=true \
     bluetooth.profile.gatt.enabled=true \
     bluetooth.profile.hfp.ag.enabled=true \
-    bluetooth.profile.hid.device.enabled=true \
     bluetooth.profile.hid.host.enabled=true \
     bluetooth.profile.map.server.enabled=true \
     bluetooth.profile.opp.enabled=true \
