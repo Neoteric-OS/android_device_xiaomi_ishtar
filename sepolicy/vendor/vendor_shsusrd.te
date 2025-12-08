@@ -1,2 +1,0 @@
-allow vendor_shsusrd sysfs:file { read };
-allow vendor_shsusrd sysfs:file { open };
