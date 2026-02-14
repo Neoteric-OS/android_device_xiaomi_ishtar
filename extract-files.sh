@@ -74,6 +74,9 @@ function blob_fixup() {
         odm/lib64/libmt@1.3.so)
             "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
             ;;
+        odm/lib64/libaudioroute_ext.so | vendor/lib64/libar-pal.so | vendor/lib64/libagm.so)
+            "${PATCHELF}" --replace-needed "libaudioroute.so" "libaudioroute-v34.so" "${2}"
+            ;;
         system/priv-app/MiuiCamera/MiuiCamera.apk)
             tmp_dir="${EXTRACT_TMP_DIR}/MiuiCamera"
             mkdir -p "$tmp_dir"
