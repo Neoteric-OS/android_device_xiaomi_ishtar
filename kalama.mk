@@ -464,7 +464,8 @@ PRODUCT_PACKAGES += \
     libaudioroute-v34 \
     libbinder_shim.vendor \
     libprocessgroup_shim \
-    libstagefright_foundation-v33
+    libstagefright_foundation-v33 \
+    libui-v34
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 33

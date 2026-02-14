@@ -79,6 +79,7 @@ function blob_fixup() {
             ;;
         odm/lib64/hw/camera.xiaomi.so)
             "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "$2"
+            "${PATCHELF}" --add-needed "libui-v34.so" "${2}"
             ;;
         odm/lib64/libcamxcommonutils.so | odm/lib64/hw/com.qti.chi.override.so | odm/lib64/libchifeature2.so | odm/lib64/libmialgoengine.so)
             "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "$2"
