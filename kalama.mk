@@ -463,6 +463,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libaudioroute-v34 \
     libbinder_shim.vendor \
+    libcodec2_shim \
     libprocessgroup_shim \
     libstagefright_foundation-v33 \
     libui-v34

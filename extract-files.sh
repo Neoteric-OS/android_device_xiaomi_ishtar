@@ -148,6 +148,9 @@ function blob_fixup() {
         vendor/bin/hw/dolbycodec2 | vendor/bin/hw/vendor.dolby.media.c2@1.0-service | vendor/lib64/c2.dolby.hevc.dec.so | vendor/lib64/c2.dolby.hevc.enc.so | vendor/lib64/c2.dolby.hevc.sec.dec.so | vendor/lib64/libDecoderProcessor.so | vendor/lib64/libdlbdsservice.so | vendor/lib64/libdlbpreg.so | vendor/lib64/libswspatializer_ext.so | vendor/lib64/soundfx/libdlbvol.so | vendor/lib64/soundfx/libhwdap.so | vendor/lib64/soundfx/libswspatializer.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
+        vendor/lib64/libqcodec2_core.so)
+            "${PATCHELF}" --add-needed "libcodec2_shim.so" "${2}"
+            ;;
     esac
 }
 
