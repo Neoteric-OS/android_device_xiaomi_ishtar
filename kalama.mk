@@ -417,6 +417,7 @@ include $(DEVICE_PATH)/configs/props/vendor_props.mk
 # QTI components
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
+    alarm \
     av \
     bt \
     gps \
