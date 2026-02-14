@@ -136,6 +136,7 @@ function blob_fixup() {
             ;;
         vendor/lib64/vendor.libdpmframework.so)
             "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
+            "${PATCHELF}" --add-needed "libbinder_shim.so" "${2}"
             ;;
     esac
 }

@@ -461,7 +461,8 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libaudioroute-v34
+    libaudioroute-v34 \
+    libbinder_shim.vendor
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 33
