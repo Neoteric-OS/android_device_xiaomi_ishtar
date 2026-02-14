@@ -18,8 +18,8 @@ PRODUCT_MODEL := Xiaomi 13 Ultra
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="ishtar_global-user 14 UKQ1.230804.001 V816.0.20.0.UMACNXM release-keys" \
-    BuildFingerprint=Xiaomi/ishtar_global/ishtar:14/UKQ1.230804.001/V816.0.20.0.UMACNXM:user/release-keys \
+    BuildDesc="ishtar_global-user 15 AQ3A.240912.001 OS2.0.210.0.VMAMIXM release-keys" \
+    BuildFingerprint=Xiaomi/ishtar_global/ishtar:15/AQ3A.240912.001/OS2.0.210.0.VMAMIXM:user/release-keys \
     DeviceName=ishtar \
     DeviceProduct=ishtar \
     SystemDevice=ishtar \
