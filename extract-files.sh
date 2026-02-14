@@ -68,7 +68,7 @@ function blob_fixup() {
         vendor/bin/hw/android.hardware.security.keymint-service-qti | vendor/lib64/libqtikeymint.so)
             "${PATCHELF}" --add-needed android.hardware.security.rkp-V3-ndk.so "${2}"
             ;;
-        odm/lib64/hw/displayfeature.default.so | vendor/lib64/libdlbdsservice.so | vendor/lib64/soundfx/libhwdap.so)
+        odm/lib64/hw/displayfeature.default.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
         odm/lib64/libmt@1.3.so)
@@ -137,6 +137,9 @@ function blob_fixup() {
         vendor/lib64/vendor.libdpmframework.so)
             "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
             "${PATCHELF}" --add-needed "libbinder_shim.so" "${2}"
+            ;;
+        vendor/bin/hw/dolbycodec2 | vendor/bin/hw/vendor.dolby.media.c2@1.0-service | vendor/lib64/c2.dolby.hevc.dec.so | vendor/lib64/c2.dolby.hevc.enc.so | vendor/lib64/c2.dolby.hevc.sec.dec.so | vendor/lib64/libDecoderProcessor.so | vendor/lib64/libdlbdsservice.so | vendor/lib64/libdlbpreg.so | vendor/lib64/libswspatializer_ext.so | vendor/lib64/soundfx/libdlbvol.so | vendor/lib64/soundfx/libhwdap.so | vendor/lib64/soundfx/libswspatializer.so)
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
     esac
 }
