@@ -84,31 +84,6 @@ function blob_fixup() {
         odm/lib64/libcamxcommonutils.so | odm/lib64/hw/com.qti.chi.override.so | odm/lib64/libchifeature2.so | odm/lib64/libmialgoengine.so)
             "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "$2"
             ;;
-        system/priv-app/MiuiCamera/MiuiCamera.apk)
-            tmp_dir="${EXTRACT_TMP_DIR}/MiuiCamera"
-            mkdir -p "$tmp_dir"
-
-            if [ ! -f "$2" ]; then
-                echo "Error: File $2 does not exist."
-                exit 1
-            fi
-
-            java -jar "${APKTOOL}" d -q "$2" -o "$tmp_dir" -f || {
-                echo "Error running apktool."
-                exit 1
-            }
-
-            if grep -rl "com.miui.gallery" "$tmp_dir"; then
-                grep -rl "com.miui.gallery" "$tmp_dir" | xargs sed -i 's|"com.miui.gallery"|"com.google.android.apps.photos"|g'
-            fi
-
-            java -jar "${APKTOOL}" b -q "$tmp_dir" -o "$2" || {
-                echo "Error rebuilding APK."
-                exit 1
-            }
-
-            rm -rf "$tmp_dir"
-            ;;
         vendor/etc/gps.conf)
             sed -i 's/com\.lbe\.security\.miui/com\.google\.android\.carrierlocation/g' "${2}"
             ;;
