@@ -11,6 +11,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.hardware.display.DisplayManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -84,7 +85,13 @@ public class AodBrightnessService extends Service {
                     }
                     break;
                 case Intent.ACTION_DISPLAY_STATE_CHANGED:
-                    mDisplayState = getDisplay().getState();
+                    final Display display = getSystemService(DisplayManager.class)
+                            .getDisplay(Display.DEFAULT_DISPLAY);
+                    if (display == null) {
+                        Log.w(TAG, "onReceive: default display unavailable");
+                        break;
+                    }
+                    mDisplayState = display.getState();
                     updateDozeBrightness();
                     break;
             }

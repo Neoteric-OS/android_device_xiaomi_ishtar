@@ -10,9 +10,11 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.hardware.display.DisplayManager;
 import android.os.IBinder;
 import android.os.UserHandle;
 import android.util.Log;
+import android.view.Display;
 
 public class TouchOrientationService extends Service {
 
@@ -45,7 +47,13 @@ public class TouchOrientationService extends Service {
     }
 
     private void updateOrientation() {
-        final int rotation = getDisplay().getRotation();
+        final Display display = getSystemService(DisplayManager.class)
+                .getDisplay(Display.DEFAULT_DISPLAY);
+        if (display == null) {
+            Log.w(TAG, "updateOrientation: default display unavailable");
+            return;
+        }
+        final int rotation = display.getRotation();
         Log.d(TAG, "updateTpOrientation: rotation=" + rotation);
 
         // Lucky for us, Surface.ROTATION_* directly translates into touchpanel values
