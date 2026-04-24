@@ -6,4 +6,5 @@ dontaudit platform_app adsprpcd_file:dir { open read watch getattr };
 dontaudit platform_app vendor_qdsp_device:chr_file { read open ioctl };
 dontaudit platform_app vendor_hal_dspmanager_hwservice:hwservice_manager { find };
 binder_call(platform_app, hal_dms_default)
+binder_call(platform_app, hal_touchfeature_xiaomi_default)
 get_prop(platform_app, vendor_miui_vcamera_prop)
