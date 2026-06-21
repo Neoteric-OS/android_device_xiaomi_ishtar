@@ -1,0 +1,62 @@
+Subject: [PATCH] MiuiCamera: load obfuscated resources
+
+w8.a.c() loads encrypted/obfuscated drawables by reading the resource's
+asset path (obfu_res/res/<name>) and opening it via AssetManager. Some of
+these assets are cloud/runtime-delivered on stock HyperOS and are absent on
+an AOSP port, so AssetManager.open() throws FileNotFoundException, which is
+uncaught and force-closes the camera (e.g. opening the settings menu).
+
+Wrap the open() in a try/catch and, on FileNotFoundException, fall back to a
+normal resource lookup via ResourcesCompat.getDrawable() instead of crashing.
+---
+diff --git a/smali_classes3/w8/a.smali b/smali_classes3/w8/a.smali
+index a547acf..2527266 100644
+--- a/smali_classes3/w8/a.smali
++++ b/smali_classes3/w8/a.smali
+@@ -166,7 +166,7 @@
+ .end method
+
+ .method public static c(Landroid/content/res/Resources;ILjava/lang/Integer;)Landroid/graphics/drawable/Drawable;
+-    .locals 5
++    .locals 6
+     .param p1    # I
+         .annotation build Landroidx/annotation/IdRes;
+         .end annotation
+@@ -232,6 +232,8 @@
+     move p2, v2
+
+     :goto_0
++    move v5, p1
++
+     const/4 v3, 0x1
+
+     invoke-virtual {p0, p1, p2, v0, v3}, Landroid/content/res/Resources;->getValueForDensity(IILandroid/util/TypedValue;Z)V
+@@ -252,9 +254,12 @@
+
+     move-result-object p2
+
++    :try_start_obfu
+     invoke-virtual {p2, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+     move-result-object p2
++    :try_end_obfu
++    .catch Ljava/io/FileNotFoundException; {:try_start_obfu .. :try_end_obfu} :catch_obfu
+
+     :try_start_0
+     invoke-static {p2}, Lkotlin/jvm/internal/k;->c(Ljava/lang/Object;)V
+@@ -339,4 +344,15 @@
+     invoke-static {p2, p0}, LB3/O1;->d(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+     throw p1
++
++    :catch_obfu
++    move-exception p2
++
++    const/4 p2, 0x0
++
++    invoke-static {p0, v5, p2}, Landroidx/core/content/res/ResourcesCompat;->getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
++
++    move-result-object p0
++
++    return-object p0
+ .end method
