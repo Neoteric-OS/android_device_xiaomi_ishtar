@@ -2,7 +2,8 @@ allow platform_app vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager 
 allow platform_app adsprpcd_file:dir { read search getattr };
 allow platform_app hal_dms_hwservice:hwservice_manager find;
 allow platform_app app_data_file:file { execute };
-dontaudit platform_app adsprpcd_file:dir { open read watch getattr };
+
+allow platform_app adsprpcd_file:dir { open read watch getattr search };
 dontaudit platform_app vendor_qdsp_device:chr_file { read open ioctl };
 dontaudit platform_app vendor_hal_dspmanager_hwservice:hwservice_manager { find };
 binder_call(platform_app, hal_dms_default)

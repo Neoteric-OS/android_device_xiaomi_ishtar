@@ -1,9 +1,6 @@
 # DDR
 vendor.ddr_training.is.start u:object_r:vendor_ddr_prop:s0
 
-# Dolby
-vendor.dolbyv. u:object_r:vendor_dolbyv_prop:s0
-
 # Fingerprint
 persist.vendor.fingerprint. u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp. u:object_r:vendor_fp_prop:s0
@@ -18,7 +15,6 @@ vendor.dtool. u:object_r:vendor_fp_prop:s0
 ro.vendor.gnss.edgnss.downloadQxwzAk u:object_r:vendor_edgnss_qxwz_downloadak_prop:s0
 
 # Mlipay
-persist.vendor.sys.provision.status u:object_r:vendor_payment_security_prop:s0
 vendor.sys.feature_state u:object_r:vendor_payment_security_prop:s0
 vendor.sys.rpmb_state u:object_r:vendor_payment_security_prop:s0
 
