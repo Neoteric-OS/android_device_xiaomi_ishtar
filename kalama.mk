@@ -416,13 +416,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service
 
-# Properties
-include $(DEVICE_PATH)/configs/props/odm_props.mk
-include $(DEVICE_PATH)/configs/props/product_prop.mk
-include $(DEVICE_PATH)/configs/props/system_ext_prop.mk
-include $(DEVICE_PATH)/configs/props/system_prop.mk
-include $(DEVICE_PATH)/configs/props/vendor_props.mk
-
 # QTI components
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
@@ -474,7 +467,7 @@ PRODUCT_PACKAGES += \
     libbinder_shim.vendor \
     libcodec2_shim \
     libprocessgroup_shim \
-    libstagefright_foundation-v33 \
+    libstagefright_foundation-v33.vendor \
     libui-v34
 
 # Shipping API level
