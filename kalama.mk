@@ -475,6 +475,13 @@ BOARD_SHIPPING_API_LEVEL := 33
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 PRODUCT_TARGET_VNDK_VERSION := $(BOARD_SHIPPING_API_LEVEL)
 
+# Telephony
+PRODUCT_PACKAGES += \
+    xiaomi-telephony-stub
+
+PRODUCT_BOOT_JARS += \
+    xiaomi-telephony-stub
+
 # Tetheroffload
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
